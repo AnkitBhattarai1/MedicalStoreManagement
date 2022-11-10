@@ -61,6 +61,8 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::TextBox^ tbPassword;
 	private: System::Windows::Forms::Button^ cancelButton;
 	private: System::Windows::Forms::Button^ loginButton;
+	private: System::Windows::Forms::ToolTip^ toolTip1;
+	private: System::ComponentModel::IContainer^ components;
 
 
 
@@ -72,7 +74,7 @@ namespace MedicalStoreManagement {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -81,6 +83,7 @@ namespace MedicalStoreManagement {
 		/// </summary>
 		void InitializeComponent()
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(UserLogin::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
@@ -97,6 +100,7 @@ namespace MedicalStoreManagement {
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->toolTip1 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->panel1->SuspendLayout();
 			this->panel4->SuspendLayout();
 			this->panel7->SuspendLayout();
@@ -204,6 +208,7 @@ namespace MedicalStoreManagement {
 			this->tbPassword->Size = System::Drawing::Size(270, 32);
 			this->tbPassword->TabIndex = 6;
 			this->tbPassword->UseSystemPasswordChar = true;
+			this->tbPassword->TextChanged += gcnew System::EventHandler(this, &UserLogin::tbPassword_TextChanged);
 			this->tbPassword->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &UserLogin::UserLogin_KeyPress);
 			// 
 			// label3
@@ -315,6 +320,10 @@ namespace MedicalStoreManagement {
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			// 
+			// toolTip1
+			// 
+			this->toolTip1->ToolTipIcon = System::Windows::Forms::ToolTipIcon::Warning;
+			// 
 			// UserLogin
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -347,7 +356,7 @@ namespace MedicalStoreManagement {
 			  Admins^ admin = nullptr;
 			  
 		
-private: System::Void UserLogin_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {//Makes the background gradient
+	private: System::Void UserLogin_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {//Makes the background gradient
 		//Graphics^ g = e->Graphics;
 		//Rectangle rect(0, 0, this->Width - 1, this->Height - 1);			
 		//LinearGradientBrush^ brush = gcnew LinearGradientBrush(rect, Color::FromArgb(196, 232, 194), Color::FromArgb(70, 160, 148), LinearGradientMode::BackwardDiagonal);
@@ -356,7 +365,7 @@ private: System::Void UserLogin_Paint(System::Object^ sender, System::Windows::F
 	Tool.Lineargradientpaint(sender, e, rect, 196, 232, 194, 70, 160, 148, LinearGradientMode::Vertical);
 }
 
-private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	//Makes the bakcground gradient
 		//Graphics^ g = e->Graphics;	
 		//Rectangle rect(0, 0, this->Width - 1, this->Height - 1);	
@@ -367,11 +376,13 @@ private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Form
 	Tool.Lineargradientpaint(sender, e, rect, 36, 77, 97, 86, 137, 192, LinearGradientMode::Vertical);
 
 }
-	   private: System::Void cancelButton_click(System::Object^ sender, System::EventArgs^ e) {
+
+	private: System::Void cancelButton_click(System::Object^ sender, System::EventArgs^ e) {
 		   //Closes the userlogin page 
 		   this->Close();
 	   }
-private: System::Void loginButton_click(System::Object^ sender, System::EventArgs^ e) {
+
+	private: System::Void loginButton_click(System::Object^ sender, System::EventArgs^ e) {
 
 	try {
 		String ^  username = this->tbUsername->Text;
@@ -380,7 +391,7 @@ private: System::Void loginButton_click(System::Object^ sender, System::EventArg
 		SqlConnection connection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Mydatabase;Integrated Security=True");
 		connection.Open();
 
-		SqlCommand command("Select * from users where user_username=@username and password = @password ",%connection);
+		SqlCommand command("Select * from users where username=@username and password = @password ",%connection);
 		command.Parameters->AddWithValue("@username", username);
 		command.Parameters->AddWithValue("@password", password);
 		SqlDataReader^ reader = command.ExecuteReader();
@@ -403,8 +414,6 @@ private: System::Void loginButton_click(System::Object^ sender, System::EventArg
 			this->tbPassword->Text = "";
 			MessageBox::Show("Invalid username or password");
 		}
-
-
 		
 
 	}
@@ -413,9 +422,19 @@ private: System::Void loginButton_click(System::Object^ sender, System::EventArg
 		MessageBox::Show("unable to connect to the database");
 	}
 }
-private: System::Void UserLogin_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+
+	private: System::Void UserLogin_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 	if (e->KeyChar == 13) {
 		loginButton_click(sender, e);
+	}
+}
+
+	private: System::Void tbPassword_TextChanged(System::Object^ sender, System::EventArgs^ e) {  //warns if the password is not greater than 6 characters
+	if (this->tbPassword->Text->Length <= 8) {
+		this->toolTip1->Show("Password must have more than 8 characters",this->tbPassword);
+	}
+	if (this->tbPassword->Text->Length > 8) {
+		this->toolTip1->RemoveAll();
 	}
 }
 };

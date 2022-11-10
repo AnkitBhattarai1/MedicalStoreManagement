@@ -36,7 +36,7 @@
     <ClCompile Include="Userspage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Medicine.cpp">
+    <ClCompile Include="Suppliers.cpp">
       <Filter>Forms</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,7 +65,7 @@
     <ClInclude Include="Userspage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Medicine.h">
+    <ClInclude Include="Suppliers.h">
       <Filter>Forms</Filter>
     </ClInclude>
   </ItemGroup>

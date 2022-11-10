@@ -114,9 +114,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\New folder\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\New folder\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -125,7 +134,7 @@
     <ClCompile Include="Adminpage.cpp" />
     <ClCompile Include="employeeManagement.cpp" />
     <ClCompile Include="First.cpp" />
-    <ClCompile Include="Medicine.cpp" />
+    <ClCompile Include="Suppliers.cpp" />
     <ClCompile Include="UserLogin.cpp" />
     <ClCompile Include="Userspage.cpp" />
   </ItemGroup>
@@ -137,7 +146,7 @@
     <ClInclude Include="employeeManagement.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Medicine.h">
+    <ClInclude Include="Suppliers.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Tools.h" />
@@ -163,12 +172,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="employeeManagement.resx">
       <DependentUpon>employeeManagement.h</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="First.resx">
       <DependentUpon>First.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Medicine.resx">
-      <DependentUpon>Medicine.h</DependentUpon>
+    <EmbeddedResource Include="Suppliers.resx">
+      <DependentUpon>Suppliers.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserLogin.resx">
       <DependentUpon>UserLogin.h</DependentUpon>

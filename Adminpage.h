@@ -2,6 +2,7 @@
 #include "Tools.h"
 #include "AdminLogin.h"
 #include "employeeManagement.h"
+#include "Suppliers.h"
 
 
 
@@ -51,6 +52,11 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::Panel^ panel5;
 	private: System::Windows::Forms::Panel^ menuPanel;
 	private: System::Windows::Forms::Button^ employeeButton;
+	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button1;
 
 
 
@@ -84,6 +90,11 @@ namespace MedicalStoreManagement {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Adminpage::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->employeeButton = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -116,28 +127,118 @@ namespace MedicalStoreManagement {
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::Color::Transparent;
+			this->panel3->Controls->Add(this->button5);
+			this->panel3->Controls->Add(this->button4);
+			this->panel3->Controls->Add(this->button3);
+			this->panel3->Controls->Add(this->button2);
+			this->panel3->Controls->Add(this->button1);
 			this->panel3->Controls->Add(this->employeeButton);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel3->Location = System::Drawing::Point(0, 130);
+			this->panel3->Location = System::Drawing::Point(0, 150);
 			this->panel3->Margin = System::Windows::Forms::Padding(0);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(250, 623);
+			this->panel3->Size = System::Drawing::Size(250, 603);
 			this->panel3->TabIndex = 1;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::Color::Transparent;
+			this->button5->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button5->FlatAppearance->BorderSize = 0;
+			this->button5->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button5->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->button5->Location = System::Drawing::Point(0, 300);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(250, 60);
+			this->button5->TabIndex = 5;
+			this->button5->Text = L"EMPLOYEE";
+			this->button5->UseVisualStyleBackColor = false;
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::Color::Transparent;
+			this->button4->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button4->FlatAppearance->BorderSize = 0;
+			this->button4->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button4->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->button4->Location = System::Drawing::Point(0, 240);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(250, 60);
+			this->button4->TabIndex = 4;
+			this->button4->Text = L"EMPLOYEE";
+			this->button4->UseVisualStyleBackColor = false;
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::Transparent;
+			this->button3->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button3->FlatAppearance->BorderSize = 0;
+			this->button3->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->button3->Location = System::Drawing::Point(0, 180);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(250, 60);
+			this->button3->TabIndex = 3;
+			this->button3->Text = L"EMPLOYEE";
+			this->button3->UseVisualStyleBackColor = false;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Transparent;
+			this->button2->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button2->FlatAppearance->BorderSize = 0;
+			this->button2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->button2->Location = System::Drawing::Point(0, 120);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(250, 60);
+			this->button2->TabIndex = 2;
+			this->button2->Text = L"EMPLOYEE";
+			this->button2->UseVisualStyleBackColor = false;
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Transparent;
+			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->button1->Location = System::Drawing::Point(0, 60);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(250, 60);
+			this->button1->TabIndex = 1;
+			this->button1->Text = L"SUPPLIERS";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Adminpage::button1_Click);
 			// 
 			// employeeButton
 			// 
 			this->employeeButton->BackColor = System::Drawing::Color::Transparent;
 			this->employeeButton->Dock = System::Windows::Forms::DockStyle::Top;
 			this->employeeButton->FlatAppearance->BorderSize = 0;
-			this->employeeButton->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(36)),
-				static_cast<System::Int32>(static_cast<System::Byte>(77)), static_cast<System::Int32>(static_cast<System::Byte>(97)));
+			this->employeeButton->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
 			this->employeeButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->employeeButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->employeeButton->ForeColor = System::Drawing::SystemColors::ControlLight;
 			this->employeeButton->Location = System::Drawing::Point(0, 0);
 			this->employeeButton->Name = L"employeeButton";
-			this->employeeButton->Size = System::Drawing::Size(250, 58);
+			this->employeeButton->Size = System::Drawing::Size(250, 60);
 			this->employeeButton->TabIndex = 0;
 			this->employeeButton->Text = L"EMPLOYEE";
 			this->employeeButton->UseVisualStyleBackColor = false;
@@ -145,23 +246,25 @@ namespace MedicalStoreManagement {
 			// 
 			// panel2
 			// 
-			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(36)), static_cast<System::Int32>(static_cast<System::Byte>(77)),
-				static_cast<System::Int32>(static_cast<System::Byte>(97)));
+			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(115)));
 			this->panel2->Controls->Add(this->label1);
 			this->panel2->Controls->Add(this->pictureBox1);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel2->Location = System::Drawing::Point(0, 0);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(250, 130);
+			this->panel2->Size = System::Drawing::Size(250, 150);
 			this->panel2->TabIndex = 0;
 			// 
 			// label1
 			// 
+			this->label1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(115)));
 			this->label1->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->label1->Location = System::Drawing::Point(0, 82);
+			this->label1->Location = System::Drawing::Point(0, 102);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(250, 48);
 			this->label1->TabIndex = 1;
@@ -173,7 +276,7 @@ namespace MedicalStoreManagement {
 			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Left | System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(67, 12);
+			this->pictureBox1->Location = System::Drawing::Point(67, 22);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(110, 68);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -187,7 +290,7 @@ namespace MedicalStoreManagement {
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(250, 0);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(1082, 130);
+			this->panel4->Size = System::Drawing::Size(1082, 150);
 			this->panel4->TabIndex = 1;
 			this->panel4->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Adminpage::homePanelPaint);
 			// 
@@ -200,7 +303,7 @@ namespace MedicalStoreManagement {
 			this->homeLabel->ForeColor = System::Drawing::SystemColors::ControlLight;
 			this->homeLabel->Location = System::Drawing::Point(0, 0);
 			this->homeLabel->Name = L"homeLabel";
-			this->homeLabel->Size = System::Drawing::Size(1082, 130);
+			this->homeLabel->Size = System::Drawing::Size(1082, 150);
 			this->homeLabel->TabIndex = 0;
 			this->homeLabel->Text = L"HOME";
 			this->homeLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -210,9 +313,9 @@ namespace MedicalStoreManagement {
 			this->panel5->BackColor = System::Drawing::Color::Transparent;
 			this->panel5->Controls->Add(this->menuPanel);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel5->Location = System::Drawing::Point(250, 130);
+			this->panel5->Location = System::Drawing::Point(250, 150);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(1082, 623);
+			this->panel5->Size = System::Drawing::Size(1082, 603);
 			this->panel5->TabIndex = 2;
 			this->panel5->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Adminpage::Adminpage_Paint);
 			// 
@@ -221,7 +324,7 @@ namespace MedicalStoreManagement {
 			this->menuPanel->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->menuPanel->Location = System::Drawing::Point(0, 0);
 			this->menuPanel->Name = L"menuPanel";
-			this->menuPanel->Size = System::Drawing::Size(1082, 623);
+			this->menuPanel->Size = System::Drawing::Size(1082, 603);
 			this->menuPanel->TabIndex = 0;
 			// 
 			// Adminpage
@@ -248,6 +351,7 @@ namespace MedicalStoreManagement {
 		}
 #pragma endregion
 		Tools Tool;
+		
 	private: System::Void Adminpage_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 		//makes the background gradient
 		Rectangle rect(0, 0, this->Width - 1, this->Height - 1);
@@ -257,16 +361,15 @@ namespace MedicalStoreManagement {
 	private: System::Void panel1_Paint(Object^ sender, PaintEventArgs^ e) {
 		//paint event form menu panel
 		Rectangle rect(0, 0, this->Width, this->Height);
-		Tool.Lineargradientpaint(sender, e, rect, 36, 77, 97, 86, 137, 192, LinearGradientMode::Vertical);
+		Tool.Lineargradientpaint(sender, e, rect, 98, 79, 130, 63, 59, 108, LinearGradientMode::Vertical);
 	}
+
 	private: System::Void homePanelPaint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 		//paint event for home wala panel
 		Rectangle rect(0, 0, this->panel4->Width, this->panel4->Height);
-		 Tool.Lineargradientpaint(sender, e, rect,  86, 137, 192, 36, 77, 97, LinearGradientMode::Horizontal);
+		 Tool.Lineargradientpaint(sender, e, rect, 63, 59, 108, 98, 79, 130, LinearGradientMode::Horizontal);
 		   }
-
-	
-
+		
 	private: System::Void employeeButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		//opens the employeeManagement form into the Adminpage form 
 	this->homeLabel->Text = "EMPLOYEE";
@@ -274,8 +377,13 @@ namespace MedicalStoreManagement {
 	Tools::childForm(form,this->panel5);  // calling the static childfrom function defined in Tools class
 		}
 
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	//opens the Suppliers form into the Admins Page's Panel
+	this->homeLabel->Text = "SUPPLIERS";
+	Form^ form = gcnew Suppliers();
+	Tools::childForm(form, this->panel5);
 
-
+}
 };
 }
 

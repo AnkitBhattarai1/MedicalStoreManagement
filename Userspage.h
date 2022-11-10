@@ -1,6 +1,6 @@
 #pragma once
 #include "Tools.h"
-#include "Medicine.h"
+
 namespace MedicalStoreManagement {
 
 	using namespace System;
@@ -127,7 +127,6 @@ namespace MedicalStoreManagement {
 			this->suppliersButton->TabIndex = 1;
 			this->suppliersButton->Text = L"SUPPLIERS";
 			this->suppliersButton->UseVisualStyleBackColor = false;
-			this->suppliersButton->Click += gcnew System::EventHandler(this, &Userspage::suppliersButton_Click);
 			// 
 			// employeeButton
 			// 
@@ -146,7 +145,6 @@ namespace MedicalStoreManagement {
 			this->employeeButton->TabIndex = 0;
 			this->employeeButton->Text = L"MEDICINE";
 			this->employeeButton->UseVisualStyleBackColor = false;
-			this->employeeButton->Click += gcnew System::EventHandler(this, &Userspage::employeeButton_Click);
 			// 
 			// panel2
 			// 
@@ -251,32 +249,26 @@ namespace MedicalStoreManagement {
 
 		
 #pragma endregion
-		Tools Tool;
-		Form^ currentform = gcnew Form();
-		private: System::Void Userpage_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+
+		Form^ currentform = gcnew Form();//flag to keep which form is in the panel
+
+	private: System::Void Userpage_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 			//makes the background gradient
 			Rectangle rect(0, 0, this->Width - 1, this->Height - 1);
-			Tool.Lineargradientpaint(sender, e, rect, 196, 232, 194, 70, 160, 148, LinearGradientMode::Vertical);
+			Tools::Lineargradientpaint(sender, e, rect, 196, 232, 194, 70, 160, 148, LinearGradientMode::Vertical);
 		}
+
 	private: System::Void panel3_Paint(Object^ sender, PaintEventArgs^ e) {
 		Rectangle rect(0, 0, this->Width, this->Height);
-		Tool.Lineargradientpaint(sender, e, rect, 36, 77, 97, 86, 137, 192, LinearGradientMode::Vertical);
+		Tools::Lineargradientpaint(sender, e, rect, 36, 77, 97, 86, 137, 192, LinearGradientMode::Vertical);
 			   }
+
 	private: System::Void homePanelPaint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 		Rectangle rect(0, 0, this->panel4->Width, this->panel4->Height);
-		Tool.Lineargradientpaint(sender, e, rect, 86, 137, 192, 36, 77, 97, LinearGradientMode::Horizontal);
+		Tools::Lineargradientpaint(sender, e, rect, 86, 137, 192, 36, 77, 97, LinearGradientMode::Horizontal);
 	}
 
+	
 
-	private: System::Void employeeButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		currentform->Close();//closes the currentform in the panel if any.
-		Form^ form = gcnew Medicine();
-		this->homeLabel->Text = "MEDICINE";
-		currentform = form;
-		Tools::childForm(form, this->panel5);
-	}
-private: System::Void suppliersButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	currentform->Close();
-}
-};
+	};
 }

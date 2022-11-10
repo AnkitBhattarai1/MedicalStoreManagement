@@ -13,6 +13,7 @@ void main(array<String^>^ args) {
 	MedicalStoreManagement::First firstpage;
 
 	firstpage.ShowDialog();
+	
 
 	
 
