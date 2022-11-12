@@ -353,7 +353,7 @@ namespace MedicalStoreManagement {
 	
 #pragma endregion	
 		public: Tools Tool;	
-			  Admins^ admin = nullptr;
+		 Admins^ admin = nullptr;
 			  
 		
 	private: System::Void UserLogin_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {//Makes the background gradient
@@ -404,6 +404,7 @@ namespace MedicalStoreManagement {
 			admin->Phone = reader->GetString(3);
 			admin->Address = reader->GetString(5);
 			admin->Email = reader->GetString(4);
+			admin->role=reader->GetString(6);
 			connection.Close();	
 			this->Close();
 

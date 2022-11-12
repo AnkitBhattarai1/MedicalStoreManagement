@@ -52,27 +52,14 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::Panel^ panel5;
 	private: System::Windows::Forms::Panel^ menuPanel;
 	private: System::Windows::Forms::Button^ employeeButton;
-	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button2;
+
+
+
+
 	private: System::Windows::Forms::Button^ button1;
+	private: ns1::BunifuThinButton2^ logOut;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 
 	private:
 		/// <summary>
@@ -90,10 +77,7 @@ namespace MedicalStoreManagement {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Adminpage::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->logOut = (gcnew ns1::BunifuThinButton2());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->employeeButton = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
@@ -127,10 +111,7 @@ namespace MedicalStoreManagement {
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::Color::Transparent;
-			this->panel3->Controls->Add(this->button5);
-			this->panel3->Controls->Add(this->button4);
-			this->panel3->Controls->Add(this->button3);
-			this->panel3->Controls->Add(this->button2);
+			this->panel3->Controls->Add(this->logOut);
 			this->panel3->Controls->Add(this->button1);
 			this->panel3->Controls->Add(this->employeeButton);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -140,80 +121,43 @@ namespace MedicalStoreManagement {
 			this->panel3->Size = System::Drawing::Size(250, 603);
 			this->panel3->TabIndex = 1;
 			// 
-			// button5
+			// logOut
 			// 
-			this->button5->BackColor = System::Drawing::Color::Transparent;
-			this->button5->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button5->FlatAppearance->BorderSize = 0;
-			this->button5->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->logOut->ActiveBorderThickness = 2;
+			this->logOut->ActiveCornerRadius = 20;
+			this->logOut->ActiveFillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->logOut->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->logOut->ActiveLineColor = System::Drawing::Color::Transparent;
+			this->logOut->BackColor = System::Drawing::Color::Transparent;
+			this->logOut->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logOut.BackgroundImage")));
+			this->logOut->ButtonText = L"Log out";
+			this->logOut->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->logOut->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->button5->Location = System::Drawing::Point(0, 300);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(250, 60);
-			this->button5->TabIndex = 5;
-			this->button5->Text = L"EMPLOYEE";
-			this->button5->UseVisualStyleBackColor = false;
-			// 
-			// button4
-			// 
-			this->button4->BackColor = System::Drawing::Color::Transparent;
-			this->button4->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button4->FlatAppearance->BorderSize = 0;
-			this->button4->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button4->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->button4->Location = System::Drawing::Point(0, 240);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(250, 60);
-			this->button4->TabIndex = 4;
-			this->button4->Text = L"EMPLOYEE";
-			this->button4->UseVisualStyleBackColor = false;
-			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::Color::Transparent;
-			this->button3->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->button3->Location = System::Drawing::Point(0, 180);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(250, 60);
-			this->button3->TabIndex = 3;
-			this->button3->Text = L"EMPLOYEE";
-			this->button3->UseVisualStyleBackColor = false;
-			// 
-			// button2
-			// 
-			this->button2->BackColor = System::Drawing::Color::Transparent;
-			this->button2->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button2->FlatAppearance->BorderSize = 0;
-			this->button2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button2->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->button2->Location = System::Drawing::Point(0, 120);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(250, 60);
-			this->button2->TabIndex = 2;
-			this->button2->Text = L"EMPLOYEE";
-			this->button2->UseVisualStyleBackColor = false;
+			this->logOut->ForeColor = System::Drawing::Color::Transparent;
+			this->logOut->IdleBorderThickness = 3;
+			this->logOut->IdleCornerRadius = 30;
+			this->logOut->IdleFillColor = System::Drawing::Color::Empty;
+			this->logOut->IdleForecolor = System::Drawing::Color::Transparent;
+			this->logOut->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->logOut->Location = System::Drawing::Point(14, 533);
+			this->logOut->Margin = System::Windows::Forms::Padding(5);
+			this->logOut->Name = L"logOut";
+			this->logOut->Size = System::Drawing::Size(203, 65);
+			this->logOut->TabIndex = 21;
+			this->logOut->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->logOut->Click += gcnew System::EventHandler(this, &Adminpage::logoutButtonClick);
 			// 
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::Transparent;
 			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->button1->FlatAppearance->BorderSize = 0;
-			this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
+			this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -224,14 +168,15 @@ namespace MedicalStoreManagement {
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"SUPPLIERS";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &Adminpage::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &Adminpage::supplierButtonClick);
 			// 
 			// employeeButton
 			// 
 			this->employeeButton->BackColor = System::Drawing::Color::Transparent;
 			this->employeeButton->Dock = System::Windows::Forms::DockStyle::Top;
 			this->employeeButton->FlatAppearance->BorderSize = 0;
-			this->employeeButton->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DarkViolet;
+			this->employeeButton->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->employeeButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->employeeButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -242,7 +187,7 @@ namespace MedicalStoreManagement {
 			this->employeeButton->TabIndex = 0;
 			this->employeeButton->Text = L"EMPLOYEE";
 			this->employeeButton->UseVisualStyleBackColor = false;
-			this->employeeButton->Click += gcnew System::EventHandler(this, &Adminpage::employeeButton_Click);
+			this->employeeButton->Click += gcnew System::EventHandler(this, &Adminpage::employeeButtonClick);
 			// 
 			// panel2
 			// 
@@ -326,6 +271,7 @@ namespace MedicalStoreManagement {
 			this->menuPanel->Name = L"menuPanel";
 			this->menuPanel->Size = System::Drawing::Size(1082, 603);
 			this->menuPanel->TabIndex = 0;
+			this->menuPanel->Click += gcnew System::EventHandler(this, &Adminpage::logoutButtonClick);
 			// 
 			// Adminpage
 			// 
@@ -351,6 +297,7 @@ namespace MedicalStoreManagement {
 		}
 #pragma endregion
 		Tools Tool;
+		Form^ currentform = gcnew Form();
 		
 	private: System::Void Adminpage_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 		//makes the background gradient
@@ -361,7 +308,7 @@ namespace MedicalStoreManagement {
 	private: System::Void panel1_Paint(Object^ sender, PaintEventArgs^ e) {
 		//paint event form menu panel
 		Rectangle rect(0, 0, this->Width, this->Height);
-		Tool.Lineargradientpaint(sender, e, rect, 98, 79, 130, 63, 59, 108, LinearGradientMode::Vertical);
+		Tools::Lineargradientpaint(sender, e, rect, 98, 79, 130, 63, 59, 108, LinearGradientMode::Vertical);
 	}
 
 	private: System::Void homePanelPaint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
@@ -370,19 +317,27 @@ namespace MedicalStoreManagement {
 		 Tool.Lineargradientpaint(sender, e, rect, 63, 59, 108, 98, 79, 130, LinearGradientMode::Horizontal);
 		   }
 		
-	private: System::Void employeeButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void employeeButtonClick(System::Object^ sender, System::EventArgs^ e) {
+		currentform->Close();
 		//opens the employeeManagement form into the Adminpage form 
 	this->homeLabel->Text = "EMPLOYEE";
 	Form^ form = gcnew employeeManagement();
+	currentform = form;
 	Tools::childForm(form,this->panel5);  // calling the static childfrom function defined in Tools class
 		}
 
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void supplierButtonClick(System::Object^ sender, System::EventArgs^ e) {
 	//opens the Suppliers form into the Admins Page's Panel
+		currentform->Close();
 	this->homeLabel->Text = "SUPPLIERS";
 	Form^ form = gcnew Suppliers();
+	currentform = form;
 	Tools::childForm(form, this->panel5);
 
+}
+
+	private: System::Void logoutButtonClick(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }

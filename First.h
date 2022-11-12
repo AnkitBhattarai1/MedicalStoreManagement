@@ -123,24 +123,27 @@ namespace MedicalStoreManagement {
 		this->Show();	//Shows the hidden page	
 
 		}
+
 	private: System::Void userLoginButton(System::Object^ sender, System::EventArgs^ e) { // called when User button is clicked
 		this->Hide();  //Hides the first form
 		UserLogin userloginpage;     
 		userloginpage.ShowDialog();   //opens the userlogingform
 
 		if (userloginpage.admin != nullptr) {			
-			Userspage userpage;
+			Userspage userpage;			
+			if (userloginpage.admin->role == "seller"){  /// sets the role of the user 
+				userpage.role = "seller";
+			}
 			userpage.ShowDialog();
 		}
 		this->Show();	
-
-
-
 		}
 
 	private: System::Void cancleButton(System::Object^ sender, System::EventArgs^ e) {    // called when cancel Button is clicked
 		this->Close();  //closes the form
 
 		}
+
+	
 };
 }

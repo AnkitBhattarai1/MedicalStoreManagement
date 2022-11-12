@@ -9,5 +9,6 @@ public:
 	String^ Address;
 	String^ Phone;
 	String^ Password;
+	String^ role;
 
 };

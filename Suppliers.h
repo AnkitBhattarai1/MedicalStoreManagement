@@ -357,12 +357,12 @@ namespace MedicalStoreManagement {
 			this->bunifuCustomDataGrid1->EnableHeadersVisualStyles = false;
 			this->bunifuCustomDataGrid1->HeaderBgColor = System::Drawing::Color::SeaGreen;
 			this->bunifuCustomDataGrid1->HeaderForeColor = System::Drawing::Color::White;
-			this->bunifuCustomDataGrid1->Location = System::Drawing::Point(3, 170);
+			this->bunifuCustomDataGrid1->Location = System::Drawing::Point(3, 173);
 			this->bunifuCustomDataGrid1->Name = L"bunifuCustomDataGrid1";
 			this->bunifuCustomDataGrid1->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 			this->bunifuCustomDataGrid1->RowHeadersWidth = 51;
 			this->bunifuCustomDataGrid1->RowTemplate->Height = 24;
-			this->bunifuCustomDataGrid1->Size = System::Drawing::Size(1209, 429);
+			this->bunifuCustomDataGrid1->Size = System::Drawing::Size(1209, 426);
 			this->bunifuCustomDataGrid1->TabIndex = 2;
 			// 
 			// Column1
@@ -509,7 +509,7 @@ namespace MedicalStoreManagement {
 
 
 
-
+		   //accepts the sqldatareader and insert the data in the reader datagridview	
 		 private: Void showDataOnDataGridView(SqlDataReader^ reader) {
 		   
 

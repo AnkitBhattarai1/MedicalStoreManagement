@@ -46,14 +46,14 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::TabPage^ tabPage1;
 
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::TextBox^ firstName;
-	private: System::Windows::Forms::TextBox^ lastName;
+
+
 
 
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ address;
+
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TextBox^ email;
+
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::NumericUpDown^ contactNumber;
 
@@ -68,7 +68,7 @@ namespace MedicalStoreManagement {
 
 	private: System::Windows::Forms::RadioButton^ male;
 
-	private: System::Windows::Forms::DateTimePicker^ birthDate;
+
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::ComboBox^ employeeRole;
 
@@ -77,7 +77,7 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::TextBox^ employeeName;
 	private: System::Windows::Forms::Button^ removeEmployee;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+
 	private: System::Windows::Forms::TextBox^ searchEmployeeName;
 	private: System::Windows::Forms::Label^ label10;
 
@@ -88,65 +88,31 @@ namespace MedicalStoreManagement {
 
 
 	private: System::Windows::Forms::Button^ searchButton;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Name;
+
+
+
+
+
+
+
+	private: ns1::BunifuThinButton2^ addEmployeebuttton;
+	private: ns1::BunifuMaterialTextbox^ firstName;
+	private: ns1::BunifuDatepicker^ birthDate;
+	private: ns1::BunifuMaterialTextbox^ address;
+	private: ns1::BunifuMaterialTextbox^ email;
+	private: ns1::BunifuMaterialTextbox^ lastName;
+	private: ns1::BunifuCustomDataGrid^ dataGridView1;
+
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
-	private: ns1::BunifuThinButton2^ addEmployeebuttton;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
 
 	protected:
-
-
-
-
 	protected:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::ComponentModel::IContainer^ components;
 
 	protected:
@@ -169,41 +135,43 @@ namespace MedicalStoreManagement {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(employeeManagement::typeid));
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->removeEmployee = (gcnew System::Windows::Forms::Button());
 			this->employeeName = (gcnew System::Windows::Forms::TextBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->birthDate = (gcnew ns1::BunifuDatepicker());
+			this->address = (gcnew ns1::BunifuMaterialTextbox());
+			this->email = (gcnew ns1::BunifuMaterialTextbox());
+			this->lastName = (gcnew ns1::BunifuMaterialTextbox());
+			this->firstName = (gcnew ns1::BunifuMaterialTextbox());
 			this->addEmployeebuttton = (gcnew ns1::BunifuThinButton2());
 			this->others = (gcnew System::Windows::Forms::RadioButton());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->birthDate = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->female = (gcnew System::Windows::Forms::RadioButton());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->employeeRole = (gcnew System::Windows::Forms::ComboBox());
-			this->firstName = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->email = (gcnew System::Windows::Forms::TextBox());
 			this->contactNumber = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->lastName = (gcnew System::Windows::Forms::TextBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->address = (gcnew System::Windows::Forms::TextBox());
 			this->male = (gcnew System::Windows::Forms::RadioButton());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->searchButton = (gcnew System::Windows::Forms::Button());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->Name = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridView1 = (gcnew ns1::BunifuCustomDataGrid());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->searchButton = (gcnew System::Windows::Forms::Button());
 			this->searchEmployeeName = (gcnew System::Windows::Forms::TextBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->tabPage2->SuspendLayout();
@@ -282,24 +250,24 @@ namespace MedicalStoreManagement {
 			// 
 			this->tabPage1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
 				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->tabPage1->Controls->Add(this->birthDate);
+			this->tabPage1->Controls->Add(this->address);
+			this->tabPage1->Controls->Add(this->email);
+			this->tabPage1->Controls->Add(this->lastName);
+			this->tabPage1->Controls->Add(this->firstName);
 			this->tabPage1->Controls->Add(this->addEmployeebuttton);
 			this->tabPage1->Controls->Add(this->others);
 			this->tabPage1->Controls->Add(this->label1);
-			this->tabPage1->Controls->Add(this->birthDate);
 			this->tabPage1->Controls->Add(this->label7);
 			this->tabPage1->Controls->Add(this->label5);
 			this->tabPage1->Controls->Add(this->label3);
 			this->tabPage1->Controls->Add(this->female);
 			this->tabPage1->Controls->Add(this->label2);
 			this->tabPage1->Controls->Add(this->employeeRole);
-			this->tabPage1->Controls->Add(this->firstName);
 			this->tabPage1->Controls->Add(this->label4);
-			this->tabPage1->Controls->Add(this->email);
 			this->tabPage1->Controls->Add(this->contactNumber);
 			this->tabPage1->Controls->Add(this->label6);
-			this->tabPage1->Controls->Add(this->lastName);
 			this->tabPage1->Controls->Add(this->label8);
-			this->tabPage1->Controls->Add(this->address);
 			this->tabPage1->Controls->Add(this->male);
 			this->tabPage1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
@@ -309,6 +277,121 @@ namespace MedicalStoreManagement {
 			this->tabPage1->Size = System::Drawing::Size(1233, 649);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Add Employee";
+			// 
+			// birthDate
+			// 
+			this->birthDate->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->birthDate->BorderRadius = 0;
+			this->birthDate->ForeColor = System::Drawing::Color::White;
+			this->birthDate->Format = System::Windows::Forms::DateTimePickerFormat::Long;
+			this->birthDate->FormatCustom = nullptr;
+			this->birthDate->Location = System::Drawing::Point(9, 513);
+			this->birthDate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->birthDate->Name = L"birthDate";
+			this->birthDate->Size = System::Drawing::Size(348, 37);
+			this->birthDate->TabIndex = 25;
+			this->birthDate->Value = System::DateTime(2022, 11, 11, 16, 11, 41, 815);
+			// 
+			// address
+			// 
+			this->address->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->address->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->address->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
+			this->address->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->address->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->address->HintText = L"Kathmandu,Nepal";
+			this->address->isPassword = false;
+			this->address->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->address->LineIdleColor = System::Drawing::Color::BurlyWood;
+			this->address->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->address->LineThickness = 3;
+			this->address->Location = System::Drawing::Point(9, 342);
+			this->address->Margin = System::Windows::Forms::Padding(4);
+			this->address->Name = L"address";
+			this->address->Size = System::Drawing::Size(348, 45);
+			this->address->TabIndex = 24;
+			this->address->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			// 
+			// email
+			// 
+			this->email->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->email->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->email->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
+			this->email->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->email->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->email->HintText = L"example@gmail.com";
+			this->email->isPassword = false;
+			this->email->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->email->LineIdleColor = System::Drawing::Color::BurlyWood;
+			this->email->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->email->LineThickness = 3;
+			this->email->Location = System::Drawing::Point(9, 255);
+			this->email->Margin = System::Windows::Forms::Padding(4);
+			this->email->Name = L"email";
+			this->email->Size = System::Drawing::Size(348, 42);
+			this->email->TabIndex = 23;
+			this->email->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			// 
+			// lastName
+			// 
+			this->lastName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->lastName->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->lastName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
+			this->lastName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->lastName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->lastName->HintText = L"last name";
+			this->lastName->isPassword = false;
+			this->lastName->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->lastName->LineIdleColor = System::Drawing::Color::BurlyWood;
+			this->lastName->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->lastName->LineThickness = 3;
+			this->lastName->Location = System::Drawing::Point(4, 166);
+			this->lastName->Margin = System::Windows::Forms::Padding(4);
+			this->lastName->Name = L"lastName";
+			this->lastName->Size = System::Drawing::Size(353, 43);
+			this->lastName->TabIndex = 22;
+			this->lastName->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			// 
+			// firstName
+			// 
+			this->firstName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->firstName->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->firstName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
+			this->firstName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->firstName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->firstName->HintText = L"First name";
+			this->firstName->isPassword = false;
+			this->firstName->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->firstName->LineIdleColor = System::Drawing::Color::BurlyWood;
+			this->firstName->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->firstName->LineThickness = 3;
+			this->firstName->Location = System::Drawing::Point(9, 84);
+			this->firstName->Margin = System::Windows::Forms::Padding(4);
+			this->firstName->Name = L"firstName";
+			this->firstName->Size = System::Drawing::Size(348, 41);
+			this->firstName->TabIndex = 21;
+			this->firstName->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
 			// 
 			// addEmployeebuttton
 			// 
@@ -333,7 +416,7 @@ namespace MedicalStoreManagement {
 			this->addEmployeebuttton->IdleForecolor = System::Drawing::Color::Transparent;
 			this->addEmployeebuttton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->addEmployeebuttton->Location = System::Drawing::Point(865, 191);
+			this->addEmployeebuttton->Location = System::Drawing::Point(997, 541);
 			this->addEmployeebuttton->Margin = System::Windows::Forms::Padding(5);
 			this->addEmployeebuttton->Name = L"addEmployeebuttton";
 			this->addEmployeebuttton->Size = System::Drawing::Size(195, 57);
@@ -360,18 +443,11 @@ namespace MedicalStoreManagement {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(3, 39);
+			this->label1->Location = System::Drawing::Point(3, 29);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(188, 41);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"First Name:";
-			// 
-			// birthDate
-			// 
-			this->birthDate->Location = System::Drawing::Point(8, 521);
-			this->birthDate->Name = L"birthDate";
-			this->birthDate->Size = System::Drawing::Size(260, 22);
-			this->birthDate->TabIndex = 16;
 			// 
 			// label7
 			// 
@@ -434,22 +510,18 @@ namespace MedicalStoreManagement {
 			// employeeRole
 			// 
 			this->employeeRole->AccessibleRole = System::Windows::Forms::AccessibleRole::Text;
+			this->employeeRole->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
 			this->employeeRole->CausesValidation = false;
 			this->employeeRole->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->employeeRole->Location = System::Drawing::Point(857, 49);
-			this->employeeRole->Name = L"employeeRole";
-			this->employeeRole->Size = System::Drawing::Size(178, 24);
-			this->employeeRole->TabIndex = 18;
-			// 
-			// firstName
-			// 
-			this->firstName->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->firstName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->employeeRole->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->firstName->Location = System::Drawing::Point(8, 79);
-			this->firstName->Name = L"firstName";
-			this->firstName->Size = System::Drawing::Size(260, 25);
-			this->firstName->TabIndex = 1;
+			this->employeeRole->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->employeeRole->Location = System::Drawing::Point(947, 89);
+			this->employeeRole->Name = L"employeeRole";
+			this->employeeRole->Size = System::Drawing::Size(195, 30);
+			this->employeeRole->TabIndex = 18;
 			// 
 			// label4
 			// 
@@ -462,25 +534,17 @@ namespace MedicalStoreManagement {
 			this->label4->TabIndex = 4;
 			this->label4->Text = L"Email:";
 			// 
-			// email
-			// 
-			this->email->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->email->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->email->Location = System::Drawing::Point(9, 259);
-			this->email->Name = L"email";
-			this->email->Size = System::Drawing::Size(260, 25);
-			this->email->TabIndex = 5;
-			// 
 			// contactNumber
 			// 
+			this->contactNumber->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
 			this->contactNumber->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->contactNumber->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->contactNumber->Location = System::Drawing::Point(8, 431);
+			this->contactNumber->Location = System::Drawing::Point(8, 435);
 			this->contactNumber->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1410065407, 2, 0, 0 });
 			this->contactNumber->Name = L"contactNumber";
-			this->contactNumber->Size = System::Drawing::Size(260, 22);
+			this->contactNumber->Size = System::Drawing::Size(349, 22);
 			this->contactNumber->TabIndex = 9;
 			// 
 			// label6
@@ -494,37 +558,16 @@ namespace MedicalStoreManagement {
 			this->label6->TabIndex = 10;
 			this->label6->Text = L"Date Of Birth:";
 			// 
-			// lastName
-			// 
-			this->lastName->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->lastName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lastName->Location = System::Drawing::Point(9, 169);
-			this->lastName->Name = L"lastName";
-			this->lastName->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->lastName->Size = System::Drawing::Size(260, 25);
-			this->lastName->TabIndex = 3;
-			// 
 			// label8
 			// 
 			this->label8->BackColor = System::Drawing::Color::Transparent;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(644, 39);
+			this->label8->Location = System::Drawing::Point(723, 84);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(218, 41);
 			this->label8->TabIndex = 17;
 			this->label8->Text = L"Employee Role:";
-			// 
-			// address
-			// 
-			this->address->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->address->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->address->Location = System::Drawing::Point(8, 341);
-			this->address->Name = L"address";
-			this->address->Size = System::Drawing::Size(260, 25);
-			this->address->TabIndex = 7;
 			// 
 			// male
 			// 
@@ -544,8 +587,8 @@ namespace MedicalStoreManagement {
 			// 
 			this->tabPage3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
 				static_cast<System::Int32>(static_cast<System::Byte>(108)));
-			this->tabPage3->Controls->Add(this->searchButton);
 			this->tabPage3->Controls->Add(this->dataGridView1);
+			this->tabPage3->Controls->Add(this->searchButton);
 			this->tabPage3->Controls->Add(this->searchEmployeeName);
 			this->tabPage3->Controls->Add(this->label10);
 			this->tabPage3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
@@ -556,6 +599,107 @@ namespace MedicalStoreManagement {
 			this->tabPage3->Size = System::Drawing::Size(1233, 649);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Search Employee";
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->AllowUserToAddRows = false;
+			this->dataGridView1->AllowUserToDeleteRows = false;
+			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->dataGridView1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->dataGridView1->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCellsExceptHeaders;
+			this->dataGridView1->BackgroundColor = System::Drawing::Color::GhostWhite;
+			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->dataGridView1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::Color::SeaGreen;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this->dataGridView1->ColumnHeadersHeight = 30;
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
+				this->Column1,
+					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7
+			});
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle3;
+			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->dataGridView1->DoubleBuffered = true;
+			this->dataGridView1->EnableHeadersVisualStyles = false;
+			this->dataGridView1->HeaderBgColor = System::Drawing::Color::SeaGreen;
+			this->dataGridView1->HeaderForeColor = System::Drawing::Color::White;
+			this->dataGridView1->Location = System::Drawing::Point(0, 151);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Sunken;
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			this->dataGridView1->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToDisplayedHeaders;
+			this->dataGridView1->RowTemplate->Height = 30;
+			this->dataGridView1->Size = System::Drawing::Size(1233, 498);
+			this->dataGridView1->TabIndex = 4;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Name";
+			this->Column1->MinimumWidth = 6;
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Email";
+			this->Column2->MinimumWidth = 6;
+			this->Column2->Name = L"Column2";
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"Address";
+			this->Column3->MinimumWidth = 6;
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"Contact";
+			this->Column4->MinimumWidth = 6;
+			this->Column4->Name = L"Column4";
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"Date of Birth";
+			this->Column5->MinimumWidth = 6;
+			this->Column5->Name = L"Column5";
+			// 
+			// Column6
+			// 
+			this->Column6->HeaderText = L"Employee Role";
+			this->Column6->MinimumWidth = 6;
+			this->Column6->Name = L"Column6";
+			// 
+			// Column7
+			// 
+			this->Column7->HeaderText = L"Gender";
+			this->Column7->MinimumWidth = 6;
+			this->Column7->Name = L"Column7";
 			// 
 			// searchButton
 			// 
@@ -568,107 +712,13 @@ namespace MedicalStoreManagement {
 				static_cast<System::Byte>(0)));
 			this->searchButton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->searchButton->Location = System::Drawing::Point(612, 60);
+			this->searchButton->Location = System::Drawing::Point(612, 55);
 			this->searchButton->Name = L"searchButton";
-			this->searchButton->Size = System::Drawing::Size(100, 33);
+			this->searchButton->Size = System::Drawing::Size(123, 42);
 			this->searchButton->TabIndex = 3;
 			this->searchButton->Text = L"Search";
 			this->searchButton->UseVisualStyleBackColor = false;
 			this->searchButton->Click += gcnew System::EventHandler(this, &employeeManagement::searchEmployeeName_TextChanged);
-			// 
-			// dataGridView1
-			// 
-			this->dataGridView1->AllowUserToAddRows = false;
-			this->dataGridView1->AllowUserToDeleteRows = false;
-			this->dataGridView1->AllowUserToResizeColumns = false;
-			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->dataGridView1->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(159)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)), static_cast<System::Int32>(static_cast<System::Byte>(171)));
-			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
-				this->Name, this->Column1,
-					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6
-			});
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(159)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)), static_cast<System::Int32>(static_cast<System::Byte>(171)));
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::Color::LightSalmon;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::Color::Olive;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle2;
-			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->dataGridView1->Location = System::Drawing::Point(0, 166);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->ReadOnly = true;
-			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(1233, 483);
-			this->dataGridView1->TabIndex = 2;
-			// 
-			// Name
-			// 
-			this->Name->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::None;
-			this->Name->HeaderText = L"Name";
-			this->Name->MinimumWidth = 6;
-			this->Name->Name = L"Name";
-			this->Name->ReadOnly = true;
-			this->Name->Width = 155;
-			// 
-			// Column1
-			// 
-			this->Column1->HeaderText = L"Email";
-			this->Column1->MinimumWidth = 6;
-			this->Column1->Name = L"Column1";
-			this->Column1->ReadOnly = true;
-			// 
-			// Column2
-			// 
-			this->Column2->HeaderText = L"Address";
-			this->Column2->MinimumWidth = 6;
-			this->Column2->Name = L"Column2";
-			this->Column2->ReadOnly = true;
-			// 
-			// Column3
-			// 
-			this->Column3->HeaderText = L"Contact";
-			this->Column3->MinimumWidth = 6;
-			this->Column3->Name = L"Column3";
-			this->Column3->ReadOnly = true;
-			// 
-			// Column4
-			// 
-			this->Column4->HeaderText = L"Date Of Birth";
-			this->Column4->MinimumWidth = 6;
-			this->Column4->Name = L"Column4";
-			this->Column4->ReadOnly = true;
-			// 
-			// Column5
-			// 
-			this->Column5->HeaderText = L"EmployeeRole";
-			this->Column5->MinimumWidth = 6;
-			this->Column5->Name = L"Column5";
-			this->Column5->ReadOnly = true;
-			// 
-			// Column6
-			// 
-			this->Column6->HeaderText = L"Gender";
-			this->Column6->MinimumWidth = 6;
-			this->Column6->Name = L"Column6";
-			this->Column6->ReadOnly = true;
 			// 
 			// searchEmployeeName
 			// 
@@ -705,6 +755,7 @@ namespace MedicalStoreManagement {
 			this->Controls->Add(this->tabControl1);
 			this->ForeColor = System::Drawing::Color::Black;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Name = L"employeeManagement";
 			this->Text = L"employeeManagement";
 			this->TransparencyKey = System::Drawing::Color::Cyan;
 			this->Load += gcnew System::EventHandler(this, &employeeManagement::employeeManagement_Load);
@@ -721,39 +772,46 @@ namespace MedicalStoreManagement {
 
 		}
 #pragma endregion	
-	private: System::Void employeeManagement_Load(System::Object^ sender, System::EventArgs^ e) {  //gets the data into the combobox
-		
-		SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
-		connection.Open();
-		SqlCommand command("Select type_name from employee_type ", % connection);
-		SqlDataReader^ reader = command.ExecuteReader();
+		//called when the employeMangement is loaded
+	private: System::Void employeeManagement_Load(System::Object^ sender, System::EventArgs^ e) {  
+		//gets the data into the combobox
+		try {
+			SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
+			connection.Open();
+			SqlCommand command("Select type_name from employee_type ", % connection);
+			SqlDataReader^ reader = command.ExecuteReader();
 
-		DataTable^ dt = gcnew DataTable();
-		dt->Load(reader);
-		this->employeeRole->ValueMember = ("type_name");
-		this->employeeRole->DataSource = dt;
-		
-
-		SqlCommand cmd2("Select * from employees",%connection);   //same work a new function is to be made
-		SqlDataReader^ reader2 = cmd2.ExecuteReader();
-
-		while (reader2->Read()) {
-
-			String^ name = reader2->GetString(1) + " " + reader2->GetString(2);
-			String^ email = reader2->GetString(3);
-			String^ address = reader2->GetString(4);
-			String^ contact = reader2->GetString(5);
-			String^ Date = reader2->GetDateTime(6).ToShortDateString();
-			String^ employeetype = reader2->GetString(8);
-
-			String^ Gender = reader2->GetString(7);
+			DataTable^ dt = gcnew DataTable();
+			dt->Load(reader);
+			this->employeeRole->ValueMember = ("type_name");
+			this->employeeRole->DataSource = dt;
 
 
-			this->dataGridView1->Rows->Add(name, email, address, contact, Date, employeetype, Gender);
+			SqlCommand cmd2("Select * from employees", % connection);
+			//loads the data in the datagird view 
+			SqlDataReader^ reader2 = cmd2.ExecuteReader();
 
+			while (reader2->Read()) {
+
+				String^ name = reader2->GetString(1) + " " + reader2->GetString(2);
+				String^ email = reader2->GetString(3);
+				String^ address = reader2->GetString(4);
+				String^ contact = reader2->GetString(5);
+				String^ Date = reader2->GetDateTime(6).ToShortDateString();
+				String^ employeetype = reader2->GetString(8);
+				String^ gender = reader2->GetString(7);
+
+				this->dataGridView1->Rows->Add(name, email, address, contact, Date, employeetype, gender);
+			}
 		}
+		catch (Exception^ e) {
+			MessageBox::Show("An error occurred");
+		}
+
+		
 	}
 
+		//called when add button is clicked
 	private: System::Void addButtonclick(System::Object^ sender, System::EventArgs^ e) {		
 		String^ firstname = this->firstName->Text;
 		String^ lastname = this->lastName->Text;
@@ -777,11 +835,9 @@ namespace MedicalStoreManagement {
 			 checkedbutton = this->others;
 		}
 
-		String^ employeerole = this->employeeRole->Text;
-	
+		String^ employeerole = this->employeeRole->Text;	
 		
-	
-		try {
+			try {
 			SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
 			connection.Open();
 
@@ -815,7 +871,11 @@ namespace MedicalStoreManagement {
 		catch (SqlException^ e) {
 			MessageBox::Show("Invalid email");
 		}
+
+		searchEmployeeName_TextChanged(sender, e);
 	}
+
+		//called when remove button is clicked
 	private: System::Void removeEmployee_Click(System::Object^ sender, System::EventArgs^ e) {
 	// removes the existing employee from the database
 	
@@ -856,6 +916,8 @@ namespace MedicalStoreManagement {
 	}
 
 }
+
+		//called when the text in  the searchEmployeeName text is changed
 	private: System::Void searchEmployeeName_TextChanged(System::Object^ sender, System::EventArgs^ e) { 
 		//displays the data in the data grid view when the text in the search field changes
 		this->dataGridView1->Rows->Clear();
@@ -881,7 +943,7 @@ namespace MedicalStoreManagement {
 				String^ Gender = reader->GetString(7);
 				
 
-				this->dataGridView1->Rows->Add(name, email, address, contact, Date, employeetype, Gender);
+				this->dataGridView1->Rows->Add(name, email, address, contact, Date, Gender,employeetype); 
 
 			}
 
@@ -891,6 +953,7 @@ namespace MedicalStoreManagement {
 		}
 	}
 	
+
 
 
 };

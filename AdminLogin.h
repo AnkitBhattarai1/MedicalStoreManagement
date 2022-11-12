@@ -348,10 +348,11 @@ namespace MedicalStoreManagement {
 	private: System::Void cancelButton(System::Object^ sender, System::EventArgs^ e) {
 			//Closes the Adminlogin page
 			this->Close();
-		}
+		} 
 
-	private: System::Void loginButton(System::Object^ sender, System::EventArgs^ e) {  // When the button is clicked 
-					// Reads the content in the text field 
+	private: System::Void loginButton(System::Object^ sender, System::EventArgs^ e) { 
+		// When the button is clicked 
+		// Reads the content in the text field 
 		String^ username = this->tbusername->Text;
 		String^ password = this->tbpassword->Text;
 

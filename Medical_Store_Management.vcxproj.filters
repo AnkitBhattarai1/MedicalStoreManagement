@@ -39,6 +39,15 @@
     <ClCompile Include="Suppliers.cpp">
       <Filter>Forms</Filter>
     </ClCompile>
+    <ClCompile Include="medicineEntry.cpp">
+      <Filter>Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="medicineStocks.cpp">
+      <Filter>Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="sellMedicine.cpp">
+      <Filter>Forms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdminLogin.h">
@@ -66,6 +75,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Suppliers.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="medicineEntry.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="medicineStocks.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="sellMedicine.h">
       <Filter>Forms</Filter>
     </ClInclude>
   </ItemGroup>
