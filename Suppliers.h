@@ -62,6 +62,11 @@ namespace MedicalStoreManagement {
 	private: ns1::BunifuThinButton2^ searchButton;
 
 	private: System::Windows::Forms::ToolTip^ toolTip1;
+	private: ns1::BunifuCustomLabel^ bunifuCustomLabel5;
+	private: ns1::BunifuMaterialTextbox^ removeCompanyName;
+	private: ns1::BunifuThinButton2^ removeEmployeeButton;
+
+
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -94,6 +99,9 @@ namespace MedicalStoreManagement {
 			this->bunifuCustomLabel2 = (gcnew ns1::BunifuCustomLabel());
 			this->bunifuCustomLabel1 = (gcnew ns1::BunifuCustomLabel());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->removeEmployeeButton = (gcnew ns1::BunifuThinButton2());
+			this->removeCompanyName = (gcnew ns1::BunifuMaterialTextbox());
+			this->bunifuCustomLabel5 = (gcnew ns1::BunifuCustomLabel());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->searchButton = (gcnew ns1::BunifuThinButton2());
 			this->bunifuCustomDataGrid1 = (gcnew ns1::BunifuCustomDataGrid());
@@ -106,6 +114,7 @@ namespace MedicalStoreManagement {
 			this->tabControl1->SuspendLayout();
 			this->tabPageaddcompany->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->contactno))->BeginInit();
+			this->tabPage2->SuspendLayout();
 			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bunifuCustomDataGrid1))->BeginInit();
 			this->SuspendLayout();
@@ -270,13 +279,84 @@ namespace MedicalStoreManagement {
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->tabPage2->Controls->Add(this->removeEmployeeButton);
+			this->tabPage2->Controls->Add(this->removeCompanyName);
+			this->tabPage2->Controls->Add(this->bunifuCustomLabel5);
 			this->tabPage2->Location = System::Drawing::Point(4, 54);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage2->Size = System::Drawing::Size(1215, 602);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Remove Company";
-			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// removeEmployeeButton
+			// 
+			this->removeEmployeeButton->ActiveBorderThickness = 2;
+			this->removeEmployeeButton->ActiveCornerRadius = 20;
+			this->removeEmployeeButton->ActiveFillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->removeEmployeeButton->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
+				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->removeEmployeeButton->ActiveLineColor = System::Drawing::Color::Transparent;
+			this->removeEmployeeButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
+				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->removeEmployeeButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"removeEmployeeButton.BackgroundImage")));
+			this->removeEmployeeButton->ButtonText = L"Remove";
+			this->removeEmployeeButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->removeEmployeeButton->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->removeEmployeeButton->ForeColor = System::Drawing::Color::Transparent;
+			this->removeEmployeeButton->IdleBorderThickness = 2;
+			this->removeEmployeeButton->IdleCornerRadius = 15;
+			this->removeEmployeeButton->IdleFillColor = System::Drawing::Color::Empty;
+			this->removeEmployeeButton->IdleForecolor = System::Drawing::Color::Transparent;
+			this->removeEmployeeButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->removeEmployeeButton->Location = System::Drawing::Point(586, 85);
+			this->removeEmployeeButton->Margin = System::Windows::Forms::Padding(5);
+			this->removeEmployeeButton->Name = L"removeEmployeeButton";
+			this->removeEmployeeButton->Size = System::Drawing::Size(197, 63);
+			this->removeEmployeeButton->TabIndex = 23;
+			this->removeEmployeeButton->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->removeEmployeeButton->Click += gcnew System::EventHandler(this, &Suppliers::removeCompanyButtonClick);
+			// 
+			// removeCompanyName
+			// 
+			this->removeCompanyName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
+				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->removeCompanyName->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->removeCompanyName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
+			this->removeCompanyName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->removeCompanyName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->removeCompanyName->HintText = L"";
+			this->removeCompanyName->isPassword = false;
+			this->removeCompanyName->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->removeCompanyName->LineIdleColor = System::Drawing::Color::BurlyWood;
+			this->removeCompanyName->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->removeCompanyName->LineThickness = 3;
+			this->removeCompanyName->Location = System::Drawing::Point(276, 35);
+			this->removeCompanyName->Margin = System::Windows::Forms::Padding(4);
+			this->removeCompanyName->Name = L"removeCompanyName";
+			this->removeCompanyName->Size = System::Drawing::Size(348, 41);
+			this->removeCompanyName->TabIndex = 22;
+			this->removeCompanyName->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			// 
+			// bunifuCustomLabel5
+			// 
+			this->bunifuCustomLabel5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuCustomLabel5->Location = System::Drawing::Point(9, 32);
+			this->bunifuCustomLabel5->Name = L"bunifuCustomLabel5";
+			this->bunifuCustomLabel5->Size = System::Drawing::Size(273, 44);
+			this->bunifuCustomLabel5->TabIndex = 2;
+			this->bunifuCustomLabel5->Text = L"Name of Company:";
+			this->bunifuCustomLabel5->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// tabPage3
 			// 
@@ -322,7 +402,7 @@ namespace MedicalStoreManagement {
 			this->searchButton->Size = System::Drawing::Size(195, 57);
 			this->searchButton->TabIndex = 22;
 			this->searchButton->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->searchButton->Click += gcnew System::EventHandler(this, &Suppliers::bunifuThinButton21_Click);
+			this->searchButton->Click += gcnew System::EventHandler(this, &Suppliers::searchButtonClick);
 			// 
 			// bunifuCustomDataGrid1
 			// 
@@ -405,7 +485,7 @@ namespace MedicalStoreManagement {
 			this->searchCompanyName->Size = System::Drawing::Size(370, 42);
 			this->searchCompanyName->TabIndex = 1;
 			this->searchCompanyName->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
-			this->searchCompanyName->OnValueChanged += gcnew System::EventHandler(this, &Suppliers::bunifuThinButton21_Click);
+			this->searchCompanyName->OnValueChanged += gcnew System::EventHandler(this, &Suppliers::searchCompanyName_OnValueChanged);
 			// 
 			// bunifuCustomLabel3
 			// 
@@ -430,6 +510,7 @@ namespace MedicalStoreManagement {
 			this->tabControl1->ResumeLayout(false);
 			this->tabPageaddcompany->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->contactno))->EndInit();
+			this->tabPage2->ResumeLayout(false);
 			this->tabPage3->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bunifuCustomDataGrid1))->EndInit();
 			this->ResumeLayout(false);
@@ -461,7 +542,7 @@ namespace MedicalStoreManagement {
 		this->companyName->Text = "";
 		companyAddress->Text = "";
 		this->contactno->Value = 0;
-		bunifuThinButton21_Click(sender, e);
+		searchButtonClick(sender, e);
 	}
 	//catch (Exception^ e) {
 		//MessageBox::Show("Error Occured");
@@ -472,6 +553,7 @@ namespace MedicalStoreManagement {
 
 	private: System::Void Suppliers_Load(System::Object^ sender, System::EventArgs^ e) {
 		this->bunifuCustomDataGrid1->Rows->Clear();
+
 		SqlConnection connection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Mydatabase;Integrated Security=True");
 		connection.Open();
 		SqlCommand command("Select * from supplier_company", % connection);
@@ -481,23 +563,52 @@ namespace MedicalStoreManagement {
 		
 	}
 
-	private: System::Void bunifuThinButton21_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void searchButtonClick(System::Object^ sender, System::EventArgs^ e) {
+
+		searchCompanyName_OnValueChanged(sender,e);
+		   }
+
+	private: System::Void removeCompanyButtonClick(System::Object^ sender, System::EventArgs^ e) {
+			   
+		String^ companyname = this->removeCompanyName->Text;
+		try {
+		SqlConnection connection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Mydatabase;Integrated Security=True");
+		connection.Open();
+
+		SqlCommand cmd("Delete from supplier_company where company_name = @name", % connection);
+		cmd.Parameters->AddWithValue("@name", companyname);
+		cmd.ExecuteNonQuery();
+		//delete company form database
+		MessageBox::Show("Company Removed Successufully");
+		this->removeCompanyName->Text = "";
+		searchButtonClick(sender,e);
+				   
+			}
+		catch (Exception^ e) {
+		 MessageBox::Show("An error occured");
+			   }
+
+			   
+
+
+
+		   }
+
+	private: System::Void searchCompanyName_OnValueChanged(System::Object^ sender, System::EventArgs^ e) {
 		String^ companyname = this->searchCompanyName->Text;
 		this->bunifuCustomDataGrid1->Rows->Clear();
 		SqlConnection connection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Mydatabase;Integrated Security=True");
 		connection.Open();
-		SqlCommand command("Select * from supplier_company where company_name like @companyname+'%'", %connection);
+		SqlCommand command("Select * from supplier_company where company_name like @companyname+'%'", % connection);
 		command.Parameters->AddWithValue("@companyname", companyname);
-		SqlDataReader^ reader = command.ExecuteReader();		
+		SqlDataReader^ reader = command.ExecuteReader();
+
 		showDataOnDataGridView(reader);
+	}
 
-		   }
-		   
 	
-		   
 
-
-
+ 
 
 
 
@@ -520,11 +631,13 @@ namespace MedicalStoreManagement {
 			   String^ location = reader->GetString(3);
 
 			   this->bunifuCustomDataGrid1->Rows->Add(name, location, contact);
-		   }
-		  
+		   }	  
 
 }
+
+
 	
+
 
 
 };

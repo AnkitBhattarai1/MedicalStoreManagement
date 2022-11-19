@@ -43,34 +43,6 @@ namespace MedicalStoreManagement {
 
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::TabPage^ tabPage3;
-	private: System::Windows::Forms::TabPage^ tabPage1;
-
-	private: System::Windows::Forms::Label^ label1;
-
-
-
-
-	private: System::Windows::Forms::Label^ label2;
-
-	private: System::Windows::Forms::Label^ label3;
-
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::NumericUpDown^ contactNumber;
-
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Label^ label7;
-
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::RadioButton^ others;
-
-
-	private: System::Windows::Forms::RadioButton^ female;
-
-	private: System::Windows::Forms::RadioButton^ male;
-
-
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::ComboBox^ employeeRole;
 
 
 
@@ -83,24 +55,12 @@ namespace MedicalStoreManagement {
 
 
 
-
-
-
-
 	private: System::Windows::Forms::Button^ searchButton;
 
 
 
 
-
-
-
-	private: ns1::BunifuThinButton2^ addEmployeebuttton;
-	private: ns1::BunifuMaterialTextbox^ firstName;
-	private: ns1::BunifuDatepicker^ birthDate;
-	private: ns1::BunifuMaterialTextbox^ address;
-	private: ns1::BunifuMaterialTextbox^ email;
-	private: ns1::BunifuMaterialTextbox^ lastName;
+		    
 	private: ns1::BunifuCustomDataGrid^ dataGridView1;
 
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
@@ -110,6 +70,26 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
+	private: System::Windows::Forms::TabPage^ tabPage1;
+	private: ns1::BunifuDatepicker^ birthDate;
+	private: ns1::BunifuMaterialTextbox^ address;
+	private: ns1::BunifuMaterialTextbox^ email;
+	private: ns1::BunifuMaterialTextbox^ lastName;
+	private: ns1::BunifuMaterialTextbox^ firstName;
+	private: ns1::BunifuThinButton2^ addEmployeebuttton;
+	private: System::Windows::Forms::RadioButton^ others;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::RadioButton^ female;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::ComboBox^ employeeRole;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::NumericUpDown^ contactNumber;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::RadioButton^ male;
 
 	protected:
 	protected:
@@ -295,8 +275,8 @@ namespace MedicalStoreManagement {
 			// 
 			// address
 			// 
-			this->address->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->address->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->address->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->address->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
 			this->address->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
@@ -320,8 +300,8 @@ namespace MedicalStoreManagement {
 			// 
 			// email
 			// 
-			this->email->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->email->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->email->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->email->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
 			this->email->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
@@ -345,15 +325,15 @@ namespace MedicalStoreManagement {
 			// 
 			// lastName
 			// 
-			this->lastName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->lastName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->lastName->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->lastName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
 			this->lastName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->lastName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->lastName->HintText = L"last name";
+			this->lastName->HintText = L"";
 			this->lastName->isPassword = false;
 			this->lastName->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
@@ -361,7 +341,7 @@ namespace MedicalStoreManagement {
 			this->lastName->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->lastName->LineThickness = 3;
-			this->lastName->Location = System::Drawing::Point(4, 166);
+			this->lastName->Location = System::Drawing::Point(0, 168);
 			this->lastName->Margin = System::Windows::Forms::Padding(4);
 			this->lastName->Name = L"lastName";
 			this->lastName->Size = System::Drawing::Size(353, 43);
@@ -370,15 +350,15 @@ namespace MedicalStoreManagement {
 			// 
 			// firstName
 			// 
-			this->firstName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->firstName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->firstName->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->firstName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
 			this->firstName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->firstName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->firstName->HintText = L"First name";
+			this->firstName->HintText = L"";
 			this->firstName->isPassword = false;
 			this->firstName->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
@@ -386,7 +366,7 @@ namespace MedicalStoreManagement {
 			this->firstName->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->firstName->LineThickness = 3;
-			this->firstName->Location = System::Drawing::Point(9, 84);
+			this->firstName->Location = System::Drawing::Point(8, 78);
 			this->firstName->Margin = System::Windows::Forms::Padding(4);
 			this->firstName->Name = L"firstName";
 			this->firstName->Size = System::Drawing::Size(348, 41);
@@ -402,6 +382,7 @@ namespace MedicalStoreManagement {
 			this->addEmployeebuttton->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
 				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->addEmployeebuttton->ActiveLineColor = System::Drawing::Color::Transparent;
+			this->addEmployeebuttton->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->addEmployeebuttton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
 				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->addEmployeebuttton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"addEmployeebuttton.BackgroundImage")));
@@ -443,7 +424,7 @@ namespace MedicalStoreManagement {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(3, 29);
+			this->label1->Location = System::Drawing::Point(2, 39);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(188, 41);
 			this->label1->TabIndex = 0;
@@ -501,7 +482,7 @@ namespace MedicalStoreManagement {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(3, 129);
+			this->label2->Location = System::Drawing::Point(8, 123);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(188, 41);
 			this->label2->TabIndex = 2;
@@ -510,8 +491,9 @@ namespace MedicalStoreManagement {
 			// employeeRole
 			// 
 			this->employeeRole->AccessibleRole = System::Windows::Forms::AccessibleRole::Text;
-			this->employeeRole->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->employeeRole->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->employeeRole->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->employeeRole->CausesValidation = false;
 			this->employeeRole->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->employeeRole->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -536,15 +518,15 @@ namespace MedicalStoreManagement {
 			// 
 			// contactNumber
 			// 
-			this->contactNumber->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(140)));
-			this->contactNumber->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->contactNumber->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->contactNumber->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->contactNumber->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->contactNumber->Location = System::Drawing::Point(8, 435);
 			this->contactNumber->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1410065407, 2, 0, 0 });
 			this->contactNumber->Name = L"contactNumber";
-			this->contactNumber->Size = System::Drawing::Size(349, 22);
+			this->contactNumber->Size = System::Drawing::Size(349, 26);
 			this->contactNumber->TabIndex = 9;
 			// 
 			// label6
@@ -560,6 +542,7 @@ namespace MedicalStoreManagement {
 			// 
 			// label8
 			// 
+			this->label8->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label8->BackColor = System::Drawing::Color::Transparent;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -841,7 +824,7 @@ namespace MedicalStoreManagement {
 			SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
 			connection.Open();
 
-			SqlCommand command("Insert into employees values ( @firstname, @lastname,@email, @address, @contact, @DOB,@employeeroleid,@gender)", % connection);
+			SqlCommand command("Insert into employees values ( @firstname, @lastname,@email, @address, @contact, @DOB,@gender,@employeerole)", % connection);
 			command.Parameters->AddWithValue("@firstname", firstname);
 			command.Parameters->AddWithValue("@lastname",lastname);
 			command.Parameters->AddWithValue("@email", email);
@@ -849,7 +832,7 @@ namespace MedicalStoreManagement {
 			command.Parameters->AddWithValue("@contact",contact);
 			command.Parameters->AddWithValue("@DOB",DOB);
 			command.Parameters->AddWithValue("@gender",gender);
-			command.Parameters->AddWithValue("@employeeroleid",employeerole);
+			command.Parameters->AddWithValue("@employeerole",employeerole);
 			
 			command.ExecuteNonQuery();
 			connection.Close();
@@ -953,6 +936,7 @@ namespace MedicalStoreManagement {
 		}
 	}
 	
+
 
 
 

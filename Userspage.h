@@ -18,6 +18,7 @@ namespace MedicalStoreManagement {
 	/// <summary>
 	/// Summary for Userspage
 	/// </summary>
+
 	public ref class Userspage : public System::Windows::Forms::Form
 	{
 
@@ -36,9 +37,7 @@ namespace MedicalStoreManagement {
 	private: ns1::BunifuFlatButton^ viewMedicineButton;
 	private: ns1::BunifuFlatButton^ sellMedicineButton;
 	private: ns1::BunifuFlatButton^ medicineEntryButton;
-
-
-
+	private: ns1::BunifuThinButton2^ logOutButton;
 
 
 
@@ -46,7 +45,7 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::Label^ homeLabel;
 
 
-
+		   
 	public:
 		Userspage(void)
 		{
@@ -72,7 +71,7 @@ namespace MedicalStoreManagement {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -84,8 +83,9 @@ namespace MedicalStoreManagement {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Userspage::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->sellMedicineButton = (gcnew ns1::BunifuFlatButton());
+			this->logOutButton = (gcnew ns1::BunifuThinButton2());
 			this->medicineEntryButton = (gcnew ns1::BunifuFlatButton());
+			this->sellMedicineButton = (gcnew ns1::BunifuFlatButton());
 			this->viewMedicineButton = (gcnew ns1::BunifuFlatButton());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -119,8 +119,9 @@ namespace MedicalStoreManagement {
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::Color::Transparent;
-			this->panel3->Controls->Add(this->sellMedicineButton);
+			this->panel3->Controls->Add(this->logOutButton);
 			this->panel3->Controls->Add(this->medicineEntryButton);
+			this->panel3->Controls->Add(this->sellMedicineButton);
 			this->panel3->Controls->Add(this->viewMedicineButton);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel3->Location = System::Drawing::Point(0, 130);
@@ -130,47 +131,35 @@ namespace MedicalStoreManagement {
 			this->panel3->TabIndex = 1;
 			this->panel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Userspage::panel3_Paint);
 			// 
-			// sellMedicineButton
+			// logOutButton
 			// 
-			this->sellMedicineButton->Activecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
-				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
-			this->sellMedicineButton->BackColor = System::Drawing::Color::Transparent;
-			this->sellMedicineButton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->sellMedicineButton->BorderRadius = 7;
-			this->sellMedicineButton->ButtonText = L"Sell Medicine";
-			this->sellMedicineButton->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->sellMedicineButton->DisabledColor = System::Drawing::Color::Gray;
-			this->sellMedicineButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.5F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->sellMedicineButton->Iconcolor = System::Drawing::Color::Transparent;
-			this->sellMedicineButton->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"sellMedicineButton.Iconimage")));
-			this->sellMedicineButton->Iconimage_right = nullptr;
-			this->sellMedicineButton->Iconimage_right_Selected = nullptr;
-			this->sellMedicineButton->Iconimage_Selected = nullptr;
-			this->sellMedicineButton->IconMarginLeft = 0;
-			this->sellMedicineButton->IconMarginRight = 0;
-			this->sellMedicineButton->IconRightVisible = true;
-			this->sellMedicineButton->IconRightZoom = 0;
-			this->sellMedicineButton->IconVisible = true;
-			this->sellMedicineButton->IconZoom = 90;
-			this->sellMedicineButton->IsTab = false;
-			this->sellMedicineButton->Location = System::Drawing::Point(-2, 70);
-			this->sellMedicineButton->Margin = System::Windows::Forms::Padding(5, 6, 5, 6);
-			this->sellMedicineButton->Name = L"sellMedicineButton";
-			this->sellMedicineButton->Normalcolor = System::Drawing::Color::Transparent;
-			this->sellMedicineButton->OnHovercolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
-				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
-			this->sellMedicineButton->OnHoverTextColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+			this->logOutButton->ActiveBorderThickness = 2;
+			this->logOutButton->ActiveCornerRadius = 20;
+			this->logOutButton->ActiveFillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->sellMedicineButton->selected = false;
-			this->sellMedicineButton->Size = System::Drawing::Size(247, 58);
-			this->sellMedicineButton->TabIndex = 2;
-			this->sellMedicineButton->Text = L"Sell Medicine";
-			this->sellMedicineButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->sellMedicineButton->Textcolor = System::Drawing::Color::White;
-			this->sellMedicineButton->TextFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->sellMedicineButton->Click += gcnew System::EventHandler(this, &Userspage::medicineEntryButton_Click);
+			this->logOutButton->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
+				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->logOutButton->ActiveLineColor = System::Drawing::Color::Transparent;
+			this->logOutButton->BackColor = System::Drawing::Color::Transparent;
+			this->logOutButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logOutButton.BackgroundImage")));
+			this->logOutButton->ButtonText = L"Log out";
+			this->logOutButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->logOutButton->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->logOutButton->ForeColor = System::Drawing::Color::Transparent;
+			this->logOutButton->IdleBorderThickness = 3;
+			this->logOutButton->IdleCornerRadius = 30;
+			this->logOutButton->IdleFillColor = System::Drawing::Color::Empty;
+			this->logOutButton->IdleForecolor = System::Drawing::Color::Transparent;
+			this->logOutButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->logOutButton->Location = System::Drawing::Point(14, 531);
+			this->logOutButton->Margin = System::Windows::Forms::Padding(5);
+			this->logOutButton->Name = L"logOutButton";
+			this->logOutButton->Size = System::Drawing::Size(203, 65);
+			this->logOutButton->TabIndex = 22;
+			this->logOutButton->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->logOutButton->Click += gcnew System::EventHandler(this, &Userspage::logoutButtonClick);
 			// 
 			// medicineEntryButton
 			// 
@@ -205,14 +194,56 @@ namespace MedicalStoreManagement {
 			this->medicineEntryButton->OnHoverTextColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->medicineEntryButton->selected = false;
-			this->medicineEntryButton->Size = System::Drawing::Size(242, 57);
-			this->medicineEntryButton->TabIndex = 1;
+			this->medicineEntryButton->Size = System::Drawing::Size(247, 58);
+			this->medicineEntryButton->TabIndex = 3;
 			this->medicineEntryButton->Text = L"Medicine Entry";
 			this->medicineEntryButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->medicineEntryButton->Textcolor = System::Drawing::Color::White;
 			this->medicineEntryButton->TextFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->medicineEntryButton->Click += gcnew System::EventHandler(this, &Userspage::bunifuFlatButton1_Click);
+			this->medicineEntryButton->Click += gcnew System::EventHandler(this, &Userspage::medicineEntryButtonEntry);
+			// 
+			// sellMedicineButton
+			// 
+			this->sellMedicineButton->Activecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
+				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->sellMedicineButton->BackColor = System::Drawing::Color::Transparent;
+			this->sellMedicineButton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->sellMedicineButton->BorderRadius = 7;
+			this->sellMedicineButton->ButtonText = L"Sell Medicine";
+			this->sellMedicineButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->sellMedicineButton->DisabledColor = System::Drawing::Color::Gray;
+			this->sellMedicineButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.5F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->sellMedicineButton->Iconcolor = System::Drawing::Color::Transparent;
+			this->sellMedicineButton->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"sellMedicineButton.Iconimage")));
+			this->sellMedicineButton->Iconimage_right = nullptr;
+			this->sellMedicineButton->Iconimage_right_Selected = nullptr;
+			this->sellMedicineButton->Iconimage_Selected = nullptr;
+			this->sellMedicineButton->IconMarginLeft = 0;
+			this->sellMedicineButton->IconMarginRight = 0;
+			this->sellMedicineButton->IconRightVisible = true;
+			this->sellMedicineButton->IconRightZoom = 0;
+			this->sellMedicineButton->IconVisible = true;
+			this->sellMedicineButton->IconZoom = 90;
+			this->sellMedicineButton->IsTab = false;
+			this->sellMedicineButton->Location = System::Drawing::Point(-2, 70);
+			this->sellMedicineButton->Margin = System::Windows::Forms::Padding(5, 6, 5, 6);
+			this->sellMedicineButton->Name = L"sellMedicineButton";
+			this->sellMedicineButton->Normalcolor = System::Drawing::Color::Transparent;
+			this->sellMedicineButton->OnHovercolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
+				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->sellMedicineButton->OnHoverTextColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->sellMedicineButton->selected = false;
+			this->sellMedicineButton->Size = System::Drawing::Size(252, 58);
+			this->sellMedicineButton->TabIndex = 2;
+			this->sellMedicineButton->Text = L"Sell Medicine";
+			this->sellMedicineButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->sellMedicineButton->Textcolor = System::Drawing::Color::White;
+			this->sellMedicineButton->TextFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->sellMedicineButton->Click += gcnew System::EventHandler(this, &Userspage::sellMedicineButtonClick);
 			// 
 			// viewMedicineButton
 			// 
@@ -255,7 +286,7 @@ namespace MedicalStoreManagement {
 			this->viewMedicineButton->Textcolor = System::Drawing::Color::White;
 			this->viewMedicineButton->TextFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->viewMedicineButton->Click += gcnew System::EventHandler(this, &Userspage::viewMedicineButton_Click);
+			this->viewMedicineButton->Click += gcnew System::EventHandler(this, &Userspage::viewMedicineButtonClick);
 			// 
 			// panel2
 			// 
@@ -287,7 +318,7 @@ namespace MedicalStoreManagement {
 			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Left | System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(67, 12);
+			this->pictureBox1->Location = System::Drawing::Point(65, 12);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(110, 68);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -376,24 +407,25 @@ namespace MedicalStoreManagement {
 
 		}
 
-		
+
+
 #pragma endregion
 
 		Form^ currentform = gcnew Form();//flag to keep which form is in the panel
-		
-		public:String^ role;
-		
+
+	public:String^ role;
+
 
 	private: System::Void Userpage_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-			//makes the background gradient
-			Rectangle rect(0, 0, this->Width - 1, this->Height - 1);
-			Tools::Lineargradientpaint(sender, e, rect, 196, 232, 194, 70, 160, 148, LinearGradientMode::Vertical);
-		}	
+		//makes the background gradient
+		Rectangle rect(0, 0, this->Width - 1, this->Height - 1);
+		Tools::Lineargradientpaint(sender, e, rect, 196, 232, 194, 70, 160, 148, LinearGradientMode::Vertical);
+	}
 
 	private: System::Void homePanelPaint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 		Rectangle rect(0, 0, this->Width, this->Height);
 		Tools::Lineargradientpaint(sender, e, rect, 98, 79, 130, 63, 59, 108, LinearGradientMode::Vertical);
-	}	
+	}
 
 	private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 		Rectangle rect(0, 0, this->Width, this->Height);
@@ -402,37 +434,51 @@ namespace MedicalStoreManagement {
 
 	private: System::Void Userspage_Load(System::Object^ sender, System::EventArgs^ e) {
 
-	if (role == "seller") {// checks whats the role of the user		
-		this->medicineEntryButton->Hide();
-	}
-	
-}
+		if (role == "seller") {  // checks whats the role of the user		
+			this->medicineEntryButton->Hide();
+		}
+		else if (role = "Data") {
+			this->sellMedicineButton->Hide();
+			this->viewMedicineButton->Hide();
+		}
 
-	private: System::Void bunifuFlatButton1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+
+	private: System::Void medicineEntryButtonEntry(System::Object^ sender, System::EventArgs^ e) {
 		currentform->Close();
 		this->homeLabel->Text = "Medicine Entry";
 		medicineEntry^ form = gcnew medicineEntry();
 		currentform = form;
-		Tools::childForm(form, this->mainPanel);		
-		
+		Tools::childForm(form, this->mainPanel);
 
-}
 
-	private: System::Void viewMedicineButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	currentform->Close();
-	this->homeLabel->Text = "Medicine Stocks";
-	medicineStocks^ form = gcnew medicineStocks();
-	currentform = form;
-	Tools::childForm(form, this->mainPanel);
 	}
 
-	private: System::Void medicineEntryButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	currentform->Close();
-	this->homeLabel->Text = "Sell Medicine";
-	sellMedicine^ form = gcnew sellMedicine();
-	currentform = form;
-	Tools::childForm(form, this->mainPanel);
+	private: System::Void viewMedicineButtonClick(System::Object^ sender, System::EventArgs^ e) {
+		currentform->Close();
+		this->homeLabel->Text = "Medicine Stocks";
+		medicineStocks^ form = gcnew medicineStocks();
+		currentform = form;
+		Tools::childForm(form, this->mainPanel);
+	}
+
+	private: System::Void sellMedicineButtonClick(System::Object^ sender, System::EventArgs^ e) {
+		currentform->Close();
+		this->homeLabel->Text = "Sell Medicine";
+		sellMedicine^ form = gcnew sellMedicine();
+		currentform = form;
+		Tools::childForm(form, this->mainPanel);
+
+	}
+
+
+	private: System::Void logoutButtonClick(Object^ sender, EventArgs^ e) {
+		this->Close();
+	}
+};
+
 
 }
-};
-}
+
+
+
