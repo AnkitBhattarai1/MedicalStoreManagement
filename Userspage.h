@@ -140,6 +140,7 @@ namespace MedicalStoreManagement {
 			this->logOutButton->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
 				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->logOutButton->ActiveLineColor = System::Drawing::Color::Transparent;
+			this->logOutButton->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
 			this->logOutButton->BackColor = System::Drawing::Color::Transparent;
 			this->logOutButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logOutButton.BackgroundImage")));
 			this->logOutButton->ButtonText = L"Log out";
@@ -171,8 +172,8 @@ namespace MedicalStoreManagement {
 			this->medicineEntryButton->ButtonText = L"Medicine Entry";
 			this->medicineEntryButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->medicineEntryButton->DisabledColor = System::Drawing::Color::Gray;
-			this->medicineEntryButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.5F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->medicineEntryButton->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->medicineEntryButton->Iconcolor = System::Drawing::Color::Transparent;
 			this->medicineEntryButton->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"medicineEntryButton.Iconimage")));
 			this->medicineEntryButton->Iconimage_right = nullptr;
@@ -194,7 +195,7 @@ namespace MedicalStoreManagement {
 			this->medicineEntryButton->OnHoverTextColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->medicineEntryButton->selected = false;
-			this->medicineEntryButton->Size = System::Drawing::Size(247, 58);
+			this->medicineEntryButton->Size = System::Drawing::Size(250, 57);
 			this->medicineEntryButton->TabIndex = 3;
 			this->medicineEntryButton->Text = L"Medicine Entry";
 			this->medicineEntryButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -213,8 +214,8 @@ namespace MedicalStoreManagement {
 			this->sellMedicineButton->ButtonText = L"Sell Medicine";
 			this->sellMedicineButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->sellMedicineButton->DisabledColor = System::Drawing::Color::Gray;
-			this->sellMedicineButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.5F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->sellMedicineButton->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->sellMedicineButton->Iconcolor = System::Drawing::Color::Transparent;
 			this->sellMedicineButton->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"sellMedicineButton.Iconimage")));
 			this->sellMedicineButton->Iconimage_right = nullptr;
@@ -256,8 +257,8 @@ namespace MedicalStoreManagement {
 			this->viewMedicineButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->viewMedicineButton->DisabledColor = System::Drawing::Color::Gray;
 			this->viewMedicineButton->Dock = System::Windows::Forms::DockStyle::Top;
-			this->viewMedicineButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.5F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->viewMedicineButton->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->viewMedicineButton->Iconcolor = System::Drawing::Color::Transparent;
 			this->viewMedicineButton->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"viewMedicineButton.Iconimage")));
 			this->viewMedicineButton->Iconimage_right = nullptr;
@@ -332,7 +333,7 @@ namespace MedicalStoreManagement {
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(250, 0);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(1082, 130);
+			this->panel4->Size = System::Drawing::Size(1082, 80);
 			this->panel4->TabIndex = 1;
 			this->panel4->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Userspage::homePanelPaint);
 			// 
@@ -343,19 +344,19 @@ namespace MedicalStoreManagement {
 				static_cast<System::Byte>(0)));
 			this->homeLabel->Location = System::Drawing::Point(0, 0);
 			this->homeLabel->Name = L"homeLabel";
-			this->homeLabel->Size = System::Drawing::Size(1082, 130);
+			this->homeLabel->Size = System::Drawing::Size(1082, 80);
 			this->homeLabel->TabIndex = 0;
 			this->homeLabel->Text = L"HOME";
-			this->homeLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->homeLabel->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// panel5
 			// 
 			this->panel5->BackColor = System::Drawing::Color::Transparent;
 			this->panel5->Controls->Add(this->menuPanel);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel5->Location = System::Drawing::Point(250, 130);
+			this->panel5->Location = System::Drawing::Point(250, 80);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(1082, 623);
+			this->panel5->Size = System::Drawing::Size(1082, 673);
 			this->panel5->TabIndex = 2;
 			// 
 			// menuPanel
@@ -364,7 +365,7 @@ namespace MedicalStoreManagement {
 			this->menuPanel->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->menuPanel->Location = System::Drawing::Point(0, 0);
 			this->menuPanel->Name = L"menuPanel";
-			this->menuPanel->Size = System::Drawing::Size(1082, 623);
+			this->menuPanel->Size = System::Drawing::Size(1082, 673);
 			this->menuPanel->TabIndex = 0;
 			// 
 			// mainPanel
@@ -379,7 +380,7 @@ namespace MedicalStoreManagement {
 			this->mainPanel->Location = System::Drawing::Point(0, 0);
 			this->mainPanel->Name = L"mainPanel";
 			this->mainPanel->Quality = 10;
-			this->mainPanel->Size = System::Drawing::Size(1082, 623);
+			this->mainPanel->Size = System::Drawing::Size(1082, 673);
 			this->mainPanel->TabIndex = 0;
 			// 
 			// Userspage

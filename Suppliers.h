@@ -157,16 +157,21 @@ namespace MedicalStoreManagement {
 			// 
 			this->contactno->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
 				static_cast<System::Int32>(static_cast<System::Byte>(130)));
+			this->contactno->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->contactno->Location = System::Drawing::Point(297, 197);
 			this->contactno->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1410065407, 2, 0, 0 });
 			this->contactno->Name = L"contactno";
 			this->contactno->Size = System::Drawing::Size(359, 26);
 			this->contactno->TabIndex = 23;
+			this->contactno->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Suppliers::addKeyPress);
 			// 
 			// bunifuCustomLabel4
 			// 
 			this->bunifuCustomLabel4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->bunifuCustomLabel4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->bunifuCustomLabel4->Location = System::Drawing::Point(8, 182);
 			this->bunifuCustomLabel4->Name = L"bunifuCustomLabel4";
 			this->bunifuCustomLabel4->Size = System::Drawing::Size(283, 44);
@@ -229,6 +234,7 @@ namespace MedicalStoreManagement {
 			this->companyAddress->Size = System::Drawing::Size(359, 44);
 			this->companyAddress->TabIndex = 3;
 			this->companyAddress->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->companyAddress->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Suppliers::addKeyPress);
 			// 
 			// companyName
 			// 
@@ -254,11 +260,14 @@ namespace MedicalStoreManagement {
 			this->companyName->Size = System::Drawing::Size(359, 44);
 			this->companyName->TabIndex = 2;
 			this->companyName->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->companyName->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Suppliers::addKeyPress);
 			// 
 			// bunifuCustomLabel2
 			// 
 			this->bunifuCustomLabel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->bunifuCustomLabel2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->bunifuCustomLabel2->Location = System::Drawing::Point(8, 113);
 			this->bunifuCustomLabel2->Name = L"bunifuCustomLabel2";
 			this->bunifuCustomLabel2->Size = System::Drawing::Size(283, 44);
@@ -270,6 +279,8 @@ namespace MedicalStoreManagement {
 			// 
 			this->bunifuCustomLabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->bunifuCustomLabel1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->bunifuCustomLabel1->Location = System::Drawing::Point(3, 44);
 			this->bunifuCustomLabel1->Name = L"bunifuCustomLabel1";
 			this->bunifuCustomLabel1->Size = System::Drawing::Size(283, 44);
@@ -307,11 +318,11 @@ namespace MedicalStoreManagement {
 			this->removeEmployeeButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->removeEmployeeButton->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->removeEmployeeButton->ForeColor = System::Drawing::Color::Transparent;
+			this->removeEmployeeButton->ForeColor = System::Drawing::Color::Cyan;
 			this->removeEmployeeButton->IdleBorderThickness = 2;
 			this->removeEmployeeButton->IdleCornerRadius = 15;
 			this->removeEmployeeButton->IdleFillColor = System::Drawing::Color::Empty;
-			this->removeEmployeeButton->IdleForecolor = System::Drawing::Color::Transparent;
+			this->removeEmployeeButton->IdleForecolor = System::Drawing::Color::Cyan;
 			this->removeEmployeeButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->removeEmployeeButton->Location = System::Drawing::Point(586, 85);
@@ -346,11 +357,13 @@ namespace MedicalStoreManagement {
 			this->removeCompanyName->Size = System::Drawing::Size(348, 41);
 			this->removeCompanyName->TabIndex = 22;
 			this->removeCompanyName->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->removeCompanyName->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Suppliers::removeKeyPress);
 			// 
 			// bunifuCustomLabel5
 			// 
 			this->bunifuCustomLabel5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->bunifuCustomLabel5->ForeColor = System::Drawing::Color::Cyan;
 			this->bunifuCustomLabel5->Location = System::Drawing::Point(9, 32);
 			this->bunifuCustomLabel5->Name = L"bunifuCustomLabel5";
 			this->bunifuCustomLabel5->Size = System::Drawing::Size(273, 44);
@@ -467,8 +480,7 @@ namespace MedicalStoreManagement {
 			// 
 			this->searchCompanyName->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->searchCompanyName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F));
-			this->searchCompanyName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->searchCompanyName->ForeColor = System::Drawing::Color::Cyan;
 			this->searchCompanyName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->searchCompanyName->HintText = L"Enter the name of the company here";
@@ -478,7 +490,7 @@ namespace MedicalStoreManagement {
 			this->searchCompanyName->LineIdleColor = System::Drawing::Color::BurlyWood;
 			this->searchCompanyName->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->searchCompanyName->LineThickness = 3;
+			this->searchCompanyName->LineThickness = 2;
 			this->searchCompanyName->Location = System::Drawing::Point(223, 32);
 			this->searchCompanyName->Margin = System::Windows::Forms::Padding(4);
 			this->searchCompanyName->Name = L"searchCompanyName";
@@ -491,11 +503,12 @@ namespace MedicalStoreManagement {
 			// 
 			this->bunifuCustomLabel3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->bunifuCustomLabel3->ForeColor = System::Drawing::Color::Cyan;
 			this->bunifuCustomLabel3->Location = System::Drawing::Point(6, 41);
 			this->bunifuCustomLabel3->Name = L"bunifuCustomLabel3";
 			this->bunifuCustomLabel3->Size = System::Drawing::Size(283, 44);
 			this->bunifuCustomLabel3->TabIndex = 0;
-			this->bunifuCustomLabel3->Text = L"CompanyName:";
+			this->bunifuCustomLabel3->Text = L"Company Name:";
 			// 
 			// Suppliers
 			// 
@@ -517,8 +530,6 @@ namespace MedicalStoreManagement {
 
 		}
 #pragma endregion
-	
-
 
 	private: System::Void addCompany_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ companyname = this->companyName->Text;
@@ -587,11 +598,6 @@ namespace MedicalStoreManagement {
 		catch (Exception^ e) {
 		 MessageBox::Show("An error occured");
 			   }
-
-			   
-
-
-
 		   }
 
 	private: System::Void searchCompanyName_OnValueChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -606,8 +612,17 @@ namespace MedicalStoreManagement {
 		showDataOnDataGridView(reader);
 	}
 
-	
+	private: System::Void addKeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		if (e->KeyChar == 13) {
+		addCompany_Click(sender, e);
+			   }
+		   }
 
+	private: System::Void removeKeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == 13) {
+		removeCompanyButtonClick(sender, e);
+	}
+}
  
 
 
@@ -634,10 +649,6 @@ namespace MedicalStoreManagement {
 		   }	  
 
 }
-
-
-	
-
 
 
 };

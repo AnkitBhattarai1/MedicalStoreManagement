@@ -235,7 +235,7 @@ namespace MedicalStoreManagement {
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(250, 0);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(1082, 150);
+			this->panel4->Size = System::Drawing::Size(1082, 90);
 			this->panel4->TabIndex = 1;
 			this->panel4->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Adminpage::homePanelPaint);
 			// 
@@ -248,19 +248,19 @@ namespace MedicalStoreManagement {
 			this->homeLabel->ForeColor = System::Drawing::SystemColors::ControlLight;
 			this->homeLabel->Location = System::Drawing::Point(0, 0);
 			this->homeLabel->Name = L"homeLabel";
-			this->homeLabel->Size = System::Drawing::Size(1082, 150);
+			this->homeLabel->Size = System::Drawing::Size(1082, 90);
 			this->homeLabel->TabIndex = 0;
 			this->homeLabel->Text = L"HOME";
-			this->homeLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->homeLabel->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// panel5
 			// 
 			this->panel5->BackColor = System::Drawing::Color::Transparent;
 			this->panel5->Controls->Add(this->menuPanel);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel5->Location = System::Drawing::Point(250, 150);
+			this->panel5->Location = System::Drawing::Point(250, 90);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(1082, 603);
+			this->panel5->Size = System::Drawing::Size(1082, 663);
 			this->panel5->TabIndex = 2;
 			this->panel5->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Adminpage::Adminpage_Paint);
 			// 
@@ -269,7 +269,7 @@ namespace MedicalStoreManagement {
 			this->menuPanel->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->menuPanel->Location = System::Drawing::Point(0, 0);
 			this->menuPanel->Name = L"menuPanel";
-			this->menuPanel->Size = System::Drawing::Size(1082, 603);
+			this->menuPanel->Size = System::Drawing::Size(1082, 663);
 			this->menuPanel->TabIndex = 0;
 			this->menuPanel->Click += gcnew System::EventHandler(this, &Adminpage::logoutButtonClick);
 			// 

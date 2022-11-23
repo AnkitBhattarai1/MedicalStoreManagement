@@ -62,10 +62,12 @@ namespace MedicalStoreManagement {
 
 	private: System::Windows::Forms::ComboBox^ companyName;
 
-	private: ns1::BunifuThinButton2^ bunifuThinButton21;
+
 	private: ns1::BunifuCustomLabel^ bunifuCustomLabel3;
 	private: System::Windows::Forms::NumericUpDown^ perPiecePrize;
 	private: System::Windows::Forms::NumericUpDown^ totalStock;
+	private: ns1::BunifuThinButton2^ addButton;
+
 
 
 
@@ -89,10 +91,10 @@ namespace MedicalStoreManagement {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(medicineEntry::typeid));
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->addButton = (gcnew ns1::BunifuThinButton2());
 			this->perPiecePrize = (gcnew System::Windows::Forms::NumericUpDown());
 			this->totalStock = (gcnew System::Windows::Forms::NumericUpDown());
 			this->companyName = (gcnew System::Windows::Forms::ComboBox());
-			this->bunifuThinButton21 = (gcnew ns1::BunifuThinButton2());
 			this->bunifuCustomLabel3 = (gcnew ns1::BunifuCustomLabel());
 			this->expiryDate = (gcnew ns1::BunifuDatepicker());
 			this->manufactureDate = (gcnew ns1::BunifuDatepicker());
@@ -131,10 +133,10 @@ namespace MedicalStoreManagement {
 			// 
 			this->tabPage2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
 				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->tabPage2->Controls->Add(this->addButton);
 			this->tabPage2->Controls->Add(this->perPiecePrize);
 			this->tabPage2->Controls->Add(this->totalStock);
 			this->tabPage2->Controls->Add(this->companyName);
-			this->tabPage2->Controls->Add(this->bunifuThinButton21);
 			this->tabPage2->Controls->Add(this->bunifuCustomLabel3);
 			this->tabPage2->Controls->Add(this->expiryDate);
 			this->tabPage2->Controls->Add(this->manufactureDate);
@@ -153,72 +155,82 @@ namespace MedicalStoreManagement {
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Entry Medicine";
 			// 
+			// addButton
+			// 
+			this->addButton->ActiveBorderThickness = 2;
+			this->addButton->ActiveCornerRadius = 20;
+			this->addButton->ActiveFillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->addButton->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->addButton->ActiveLineColor = System::Drawing::Color::Transparent;
+			this->addButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->addButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->addButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"addButton.BackgroundImage")));
+			this->addButton->ButtonText = L"Add";
+			this->addButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->addButton->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->addButton->ForeColor = System::Drawing::Color::Transparent;
+			this->addButton->IdleBorderThickness = 2;
+			this->addButton->IdleCornerRadius = 15;
+			this->addButton->IdleFillColor = System::Drawing::Color::Empty;
+			this->addButton->IdleForecolor = System::Drawing::Color::Transparent;
+			this->addButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->addButton->Location = System::Drawing::Point(868, 492);
+			this->addButton->Margin = System::Windows::Forms::Padding(5);
+			this->addButton->Name = L"addButton";
+			this->addButton->Size = System::Drawing::Size(195, 57);
+			this->addButton->TabIndex = 21;
+			this->addButton->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->addButton->Click += gcnew System::EventHandler(this, &medicineEntry::addMedicineClick);
+			// 
 			// perPiecePrize
 			// 
 			this->perPiecePrize->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->perPiecePrize->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->perPiecePrize->Location = System::Drawing::Point(256, 288);
+			this->perPiecePrize->Location = System::Drawing::Point(258, 324);
+			this->perPiecePrize->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10000, 0, 0, 0 });
 			this->perPiecePrize->Name = L"perPiecePrize";
 			this->perPiecePrize->Size = System::Drawing::Size(293, 28);
 			this->perPiecePrize->TabIndex = 17;
+			this->perPiecePrize->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &medicineEntry::addkeypress);
 			// 
 			// totalStock
 			// 
 			this->totalStock->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->totalStock->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->totalStock->Location = System::Drawing::Point(256, 351);
+			this->totalStock->Location = System::Drawing::Point(258, 387);
+			this->totalStock->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10000, 0, 0, 0 });
 			this->totalStock->Name = L"totalStock";
 			this->totalStock->Size = System::Drawing::Size(293, 28);
 			this->totalStock->TabIndex = 16;
+			this->totalStock->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &medicineEntry::addkeypress);
 			// 
 			// companyName
 			// 
 			this->companyName->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->companyName->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->companyName->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->companyName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->companyName->FormattingEnabled = true;
-			this->companyName->Location = System::Drawing::Point(826, 37);
+			this->companyName->Location = System::Drawing::Point(826, 50);
 			this->companyName->Name = L"companyName";
 			this->companyName->Size = System::Drawing::Size(237, 33);
 			this->companyName->TabIndex = 15;
-			// 
-			// bunifuThinButton21
-			// 
-			this->bunifuThinButton21->ActiveBorderThickness = 1;
-			this->bunifuThinButton21->ActiveCornerRadius = 20;
-			this->bunifuThinButton21->ActiveFillColor = System::Drawing::Color::SeaGreen;
-			this->bunifuThinButton21->ActiveForecolor = System::Drawing::Color::White;
-			this->bunifuThinButton21->ActiveLineColor = System::Drawing::Color::SeaGreen;
-			this->bunifuThinButton21->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->bunifuThinButton21->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
-				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
-			this->bunifuThinButton21->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bunifuThinButton21.BackgroundImage")));
-			this->bunifuThinButton21->ButtonText = L"Add ";
-			this->bunifuThinButton21->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->bunifuThinButton21->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->bunifuThinButton21->ForeColor = System::Drawing::Color::SeaGreen;
-			this->bunifuThinButton21->IdleBorderThickness = 1;
-			this->bunifuThinButton21->IdleCornerRadius = 20;
-			this->bunifuThinButton21->IdleFillColor = System::Drawing::Color::White;
-			this->bunifuThinButton21->IdleForecolor = System::Drawing::Color::SeaGreen;
-			this->bunifuThinButton21->IdleLineColor = System::Drawing::Color::SeaGreen;
-			this->bunifuThinButton21->Location = System::Drawing::Point(888, 494);
-			this->bunifuThinButton21->Margin = System::Windows::Forms::Padding(5);
-			this->bunifuThinButton21->Name = L"bunifuThinButton21";
-			this->bunifuThinButton21->Size = System::Drawing::Size(181, 46);
-			this->bunifuThinButton21->TabIndex = 14;
-			this->bunifuThinButton21->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->bunifuThinButton21->Click += gcnew System::EventHandler(this, &medicineEntry::addMedicineClick);
+			this->companyName->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &medicineEntry::addkeypress);
 			// 
 			// bunifuCustomLabel3
 			// 
 			this->bunifuCustomLabel3->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->bunifuCustomLabel3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuCustomLabel3->Location = System::Drawing::Point(578, 26);
+			this->bunifuCustomLabel3->Location = System::Drawing::Point(578, 39);
 			this->bunifuCustomLabel3->Name = L"bunifuCustomLabel3";
 			this->bunifuCustomLabel3->Size = System::Drawing::Size(354, 44);
 			this->bunifuCustomLabel3->TabIndex = 13;
@@ -228,12 +240,13 @@ namespace MedicalStoreManagement {
 			// expiryDate
 			// 
 			this->expiryDate->Anchor = System::Windows::Forms::AnchorStyles::Left;
-			this->expiryDate->BackColor = System::Drawing::Color::SeaGreen;
+			this->expiryDate->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
 			this->expiryDate->BorderRadius = 0;
 			this->expiryDate->ForeColor = System::Drawing::Color::White;
 			this->expiryDate->Format = System::Windows::Forms::DateTimePickerFormat::Long;
 			this->expiryDate->FormatCustom = nullptr;
-			this->expiryDate->Location = System::Drawing::Point(256, 204);
+			this->expiryDate->Location = System::Drawing::Point(258, 240);
 			this->expiryDate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->expiryDate->Name = L"expiryDate";
 			this->expiryDate->Size = System::Drawing::Size(293, 57);
@@ -243,12 +256,13 @@ namespace MedicalStoreManagement {
 			// manufactureDate
 			// 
 			this->manufactureDate->Anchor = System::Windows::Forms::AnchorStyles::Left;
-			this->manufactureDate->BackColor = System::Drawing::Color::SeaGreen;
+			this->manufactureDate->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
 			this->manufactureDate->BorderRadius = 0;
 			this->manufactureDate->ForeColor = System::Drawing::Color::White;
 			this->manufactureDate->Format = System::Windows::Forms::DateTimePickerFormat::Long;
 			this->manufactureDate->FormatCustom = nullptr;
-			this->manufactureDate->Location = System::Drawing::Point(258, 123);
+			this->manufactureDate->Location = System::Drawing::Point(260, 159);
 			this->manufactureDate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->manufactureDate->Name = L"manufactureDate";
 			this->manufactureDate->Size = System::Drawing::Size(291, 59);
@@ -260,7 +274,7 @@ namespace MedicalStoreManagement {
 			this->totalStockPrizeLabel->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->totalStockPrizeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->totalStockPrizeLabel->Location = System::Drawing::Point(3, 332);
+			this->totalStockPrizeLabel->Location = System::Drawing::Point(5, 368);
 			this->totalStockPrizeLabel->Name = L"totalStockPrizeLabel";
 			this->totalStockPrizeLabel->Size = System::Drawing::Size(354, 47);
 			this->totalStockPrizeLabel->TabIndex = 9;
@@ -272,7 +286,7 @@ namespace MedicalStoreManagement {
 			this->perPiecePrizeLabel->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->perPiecePrizeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->perPiecePrizeLabel->Location = System::Drawing::Point(6, 274);
+			this->perPiecePrizeLabel->Location = System::Drawing::Point(8, 310);
 			this->perPiecePrizeLabel->Name = L"perPiecePrizeLabel";
 			this->perPiecePrizeLabel->Size = System::Drawing::Size(354, 47);
 			this->perPiecePrizeLabel->TabIndex = 8;
@@ -284,7 +298,7 @@ namespace MedicalStoreManagement {
 			this->expiryDateLabel->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->expiryDateLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->expiryDateLabel->Location = System::Drawing::Point(3, 204);
+			this->expiryDateLabel->Location = System::Drawing::Point(5, 240);
 			this->expiryDateLabel->Name = L"expiryDateLabel";
 			this->expiryDateLabel->Size = System::Drawing::Size(354, 57);
 			this->expiryDateLabel->TabIndex = 7;
@@ -296,7 +310,7 @@ namespace MedicalStoreManagement {
 			this->manufactureDateLabel->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->manufactureDateLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->manufactureDateLabel->Location = System::Drawing::Point(6, 123);
+			this->manufactureDateLabel->Location = System::Drawing::Point(8, 159);
 			this->manufactureDateLabel->Name = L"manufactureDateLabel";
 			this->manufactureDateLabel->Size = System::Drawing::Size(354, 59);
 			this->manufactureDateLabel->TabIndex = 6;
@@ -309,9 +323,11 @@ namespace MedicalStoreManagement {
 			this->description->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
 				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->description->BorderColor = System::Drawing::Color::SeaGreen;
+			this->description->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->description->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->description->Location = System::Drawing::Point(680, 269);
+			this->description->Location = System::Drawing::Point(680, 282);
 			this->description->Multiline = true;
 			this->description->Name = L"description";
 			this->description->Size = System::Drawing::Size(386, 202);
@@ -322,7 +338,7 @@ namespace MedicalStoreManagement {
 			this->bunifuCustomLabel2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->bunifuCustomLabel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuCustomLabel2->Location = System::Drawing::Point(674, 227);
+			this->bunifuCustomLabel2->Location = System::Drawing::Point(674, 240);
 			this->bunifuCustomLabel2->Name = L"bunifuCustomLabel2";
 			this->bunifuCustomLabel2->Size = System::Drawing::Size(354, 50);
 			this->bunifuCustomLabel2->TabIndex = 4;
@@ -344,19 +360,20 @@ namespace MedicalStoreManagement {
 			this->medicineName->LineIdleColor = System::Drawing::Color::Gray;
 			this->medicineName->LineMouseHoverColor = System::Drawing::Color::Blue;
 			this->medicineName->LineThickness = 3;
-			this->medicineName->Location = System::Drawing::Point(12, 51);
+			this->medicineName->Location = System::Drawing::Point(14, 87);
 			this->medicineName->Margin = System::Windows::Forms::Padding(5, 4, 5, 4);
 			this->medicineName->Name = L"medicineName";
 			this->medicineName->Size = System::Drawing::Size(348, 50);
 			this->medicineName->TabIndex = 1;
 			this->medicineName->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->medicineName->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &medicineEntry::addkeypress);
 			// 
 			// bunifuCustomLabel1
 			// 
 			this->bunifuCustomLabel1->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->bunifuCustomLabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuCustomLabel1->Location = System::Drawing::Point(6, 3);
+			this->bunifuCustomLabel1->Location = System::Drawing::Point(8, 39);
 			this->bunifuCustomLabel1->Name = L"bunifuCustomLabel1";
 			this->bunifuCustomLabel1->Size = System::Drawing::Size(354, 44);
 			this->bunifuCustomLabel1->TabIndex = 0;
@@ -425,7 +442,11 @@ private: System::Void addMedicineClick(System::Object^ sender, System::EventArgs
 	Decimal stockamount = this->totalStock->Value;
 	Decimal totalprize = perpieceprize * stockamount;
 	String^ companyname = this->companyName->Text;
-	String^ description = this->description->Text;;
+	String^ description = this->description->Text;
+
+	if (name->Length == 0 || perpieceprize == 0 || stockamount == 0 || companyname->Length == 0) {
+		MessageBox::Show("Please fill all the fields", "All fields are not filled");
+	}
 
 	int medicineid;
 
@@ -508,8 +529,12 @@ label1:
 	this->totalStock->Value = 0;
 	this->companyName->Text = "";
 	this->description->Clear();
+}   
+
+private: System::Void addkeypress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == 13) {
+		addMedicineClick(sender, e);
+	}
 }
-
-
 };
 }

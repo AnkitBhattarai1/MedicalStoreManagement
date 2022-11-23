@@ -90,6 +90,10 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::RadioButton^ male;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::NumericUpDown^ initialSalary;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
+
 
 	protected:
 	protected:
@@ -123,6 +127,8 @@ namespace MedicalStoreManagement {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->initialSalary = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->birthDate = (gcnew ns1::BunifuDatepicker());
 			this->address = (gcnew ns1::BunifuMaterialTextbox());
 			this->email = (gcnew ns1::BunifuMaterialTextbox());
@@ -151,12 +157,14 @@ namespace MedicalStoreManagement {
 			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->searchButton = (gcnew System::Windows::Forms::Button());
 			this->searchEmployeeName = (gcnew System::Windows::Forms::TextBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->tabPage2->SuspendLayout();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->initialSalary))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->contactNumber))->BeginInit();
 			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
@@ -197,6 +205,7 @@ namespace MedicalStoreManagement {
 			this->employeeName->Name = L"employeeName";
 			this->employeeName->Size = System::Drawing::Size(331, 34);
 			this->employeeName->TabIndex = 1;
+			this->employeeName->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &employeeManagement::removekeypresss);
 			// 
 			// label9
 			// 
@@ -211,7 +220,6 @@ namespace MedicalStoreManagement {
 			// 
 			// tabControl1
 			// 
-			this->tabControl1->Appearance = System::Windows::Forms::TabAppearance::FlatButtons;
 			this->tabControl1->Controls->Add(this->tabPage1);
 			this->tabControl1->Controls->Add(this->tabPage2);
 			this->tabControl1->Controls->Add(this->tabPage3);
@@ -230,6 +238,8 @@ namespace MedicalStoreManagement {
 			// 
 			this->tabPage1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
 				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->tabPage1->Controls->Add(this->initialSalary);
+			this->tabPage1->Controls->Add(this->label11);
 			this->tabPage1->Controls->Add(this->birthDate);
 			this->tabPage1->Controls->Add(this->address);
 			this->tabPage1->Controls->Add(this->email);
@@ -258,6 +268,33 @@ namespace MedicalStoreManagement {
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Add Employee";
 			// 
+			// initialSalary
+			// 
+			this->initialSalary->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->initialSalary->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->initialSalary->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->initialSalary->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->initialSalary->Location = System::Drawing::Point(947, 176);
+			this->initialSalary->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1410065407, 2, 0, 0 });
+			this->initialSalary->Name = L"initialSalary";
+			this->initialSalary->Size = System::Drawing::Size(320, 26);
+			this->initialSalary->TabIndex = 27;
+			this->initialSalary->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &employeeManagement::addkeypress);
+			// 
+			// label11
+			// 
+			this->label11->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->label11->BackColor = System::Drawing::Color::Transparent;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label11->Location = System::Drawing::Point(723, 168);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(218, 41);
+			this->label11->TabIndex = 26;
+			this->label11->Text = L"Initial Salary:";
+			// 
 			// birthDate
 			// 
 			this->birthDate->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
@@ -266,7 +303,7 @@ namespace MedicalStoreManagement {
 			this->birthDate->ForeColor = System::Drawing::Color::White;
 			this->birthDate->Format = System::Windows::Forms::DateTimePickerFormat::Long;
 			this->birthDate->FormatCustom = nullptr;
-			this->birthDate->Location = System::Drawing::Point(9, 513);
+			this->birthDate->Location = System::Drawing::Point(35, 515);
 			this->birthDate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->birthDate->Name = L"birthDate";
 			this->birthDate->Size = System::Drawing::Size(348, 37);
@@ -291,12 +328,13 @@ namespace MedicalStoreManagement {
 			this->address->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->address->LineThickness = 3;
-			this->address->Location = System::Drawing::Point(9, 342);
+			this->address->Location = System::Drawing::Point(35, 344);
 			this->address->Margin = System::Windows::Forms::Padding(4);
 			this->address->Name = L"address";
 			this->address->Size = System::Drawing::Size(348, 45);
 			this->address->TabIndex = 24;
 			this->address->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->address->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &employeeManagement::addkeypress);
 			// 
 			// email
 			// 
@@ -316,12 +354,13 @@ namespace MedicalStoreManagement {
 			this->email->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->email->LineThickness = 3;
-			this->email->Location = System::Drawing::Point(9, 255);
+			this->email->Location = System::Drawing::Point(35, 257);
 			this->email->Margin = System::Windows::Forms::Padding(4);
 			this->email->Name = L"email";
 			this->email->Size = System::Drawing::Size(348, 42);
 			this->email->TabIndex = 23;
 			this->email->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->email->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &employeeManagement::addkeypress);
 			// 
 			// lastName
 			// 
@@ -341,12 +380,13 @@ namespace MedicalStoreManagement {
 			this->lastName->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->lastName->LineThickness = 3;
-			this->lastName->Location = System::Drawing::Point(0, 168);
+			this->lastName->Location = System::Drawing::Point(34, 166);
 			this->lastName->Margin = System::Windows::Forms::Padding(4);
 			this->lastName->Name = L"lastName";
 			this->lastName->Size = System::Drawing::Size(353, 43);
 			this->lastName->TabIndex = 22;
 			this->lastName->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->lastName->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &employeeManagement::addkeypress);
 			// 
 			// firstName
 			// 
@@ -366,12 +406,13 @@ namespace MedicalStoreManagement {
 			this->firstName->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->firstName->LineThickness = 3;
-			this->firstName->Location = System::Drawing::Point(8, 78);
+			this->firstName->Location = System::Drawing::Point(34, 78);
 			this->firstName->Margin = System::Windows::Forms::Padding(4);
 			this->firstName->Name = L"firstName";
 			this->firstName->Size = System::Drawing::Size(348, 41);
 			this->firstName->TabIndex = 21;
 			this->firstName->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->firstName->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &employeeManagement::addkeypress);
 			// 
 			// addEmployeebuttton
 			// 
@@ -397,7 +438,7 @@ namespace MedicalStoreManagement {
 			this->addEmployeebuttton->IdleForecolor = System::Drawing::Color::Transparent;
 			this->addEmployeebuttton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->addEmployeebuttton->Location = System::Drawing::Point(997, 541);
+			this->addEmployeebuttton->Location = System::Drawing::Point(1002, 541);
 			this->addEmployeebuttton->Margin = System::Windows::Forms::Padding(5);
 			this->addEmployeebuttton->Name = L"addEmployeebuttton";
 			this->addEmployeebuttton->Size = System::Drawing::Size(195, 57);
@@ -411,7 +452,7 @@ namespace MedicalStoreManagement {
 			this->others->BackColor = System::Drawing::Color::Transparent;
 			this->others->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->others->Location = System::Drawing::Point(276, 574);
+			this->others->Location = System::Drawing::Point(302, 576);
 			this->others->Name = L"others";
 			this->others->Size = System::Drawing::Size(81, 24);
 			this->others->TabIndex = 15;
@@ -424,7 +465,7 @@ namespace MedicalStoreManagement {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(2, 39);
+			this->label1->Location = System::Drawing::Point(28, 41);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(188, 41);
 			this->label1->TabIndex = 0;
@@ -435,7 +476,7 @@ namespace MedicalStoreManagement {
 			this->label7->BackColor = System::Drawing::Color::Transparent;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(4, 569);
+			this->label7->Location = System::Drawing::Point(30, 571);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(105, 29);
 			this->label7->TabIndex = 12;
@@ -446,7 +487,7 @@ namespace MedicalStoreManagement {
 			this->label5->BackColor = System::Drawing::Color::Transparent;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(2, 391);
+			this->label5->Location = System::Drawing::Point(28, 393);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(188, 41);
 			this->label5->TabIndex = 8;
@@ -457,7 +498,7 @@ namespace MedicalStoreManagement {
 			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(2, 301);
+			this->label3->Location = System::Drawing::Point(28, 303);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(188, 41);
 			this->label3->TabIndex = 6;
@@ -469,7 +510,7 @@ namespace MedicalStoreManagement {
 			this->female->BackColor = System::Drawing::Color::Transparent;
 			this->female->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->female->Location = System::Drawing::Point(185, 574);
+			this->female->Location = System::Drawing::Point(211, 576);
 			this->female->Name = L"female";
 			this->female->Size = System::Drawing::Size(85, 24);
 			this->female->TabIndex = 14;
@@ -482,7 +523,7 @@ namespace MedicalStoreManagement {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(8, 123);
+			this->label2->Location = System::Drawing::Point(34, 125);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(188, 41);
 			this->label2->TabIndex = 2;
@@ -504,13 +545,14 @@ namespace MedicalStoreManagement {
 			this->employeeRole->Name = L"employeeRole";
 			this->employeeRole->Size = System::Drawing::Size(195, 30);
 			this->employeeRole->TabIndex = 18;
+			this->employeeRole->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &employeeManagement::addkeypress);
 			// 
 			// label4
 			// 
 			this->label4->BackColor = System::Drawing::Color::Transparent;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(3, 219);
+			this->label4->Location = System::Drawing::Point(29, 221);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(188, 41);
 			this->label4->TabIndex = 4;
@@ -523,7 +565,7 @@ namespace MedicalStoreManagement {
 			this->contactNumber->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->contactNumber->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->contactNumber->Location = System::Drawing::Point(8, 435);
+			this->contactNumber->Location = System::Drawing::Point(34, 437);
 			this->contactNumber->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1410065407, 2, 0, 0 });
 			this->contactNumber->Name = L"contactNumber";
 			this->contactNumber->Size = System::Drawing::Size(349, 26);
@@ -534,7 +576,7 @@ namespace MedicalStoreManagement {
 			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(2, 481);
+			this->label6->Location = System::Drawing::Point(28, 483);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(188, 28);
 			this->label6->TabIndex = 10;
@@ -558,7 +600,7 @@ namespace MedicalStoreManagement {
 			this->male->BackColor = System::Drawing::Color::Transparent;
 			this->male->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->male->Location = System::Drawing::Point(113, 574);
+			this->male->Location = System::Drawing::Point(139, 576);
 			this->male->Name = L"male";
 			this->male->Size = System::Drawing::Size(66, 24);
 			this->male->TabIndex = 13;
@@ -606,9 +648,9 @@ namespace MedicalStoreManagement {
 			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this->dataGridView1->ColumnHeadersHeight = 30;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
 				this->Column1,
-					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7
+					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8
 			});
 			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Window;
@@ -684,6 +726,12 @@ namespace MedicalStoreManagement {
 			this->Column7->MinimumWidth = 6;
 			this->Column7->Name = L"Column7";
 			// 
+			// Column8
+			// 
+			this->Column8->HeaderText = L"Initial Salary";
+			this->Column8->MinimumWidth = 6;
+			this->Column8->Name = L"Column8";
+			// 
 			// searchButton
 			// 
 			this->searchButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(60)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
@@ -747,6 +795,7 @@ namespace MedicalStoreManagement {
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->initialSalary))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->contactNumber))->EndInit();
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage3->PerformLayout();
@@ -771,6 +820,8 @@ namespace MedicalStoreManagement {
 
 
 			SqlCommand cmd2("Select * from employees", % connection);
+
+
 			//loads the data in the datagird view 
 			SqlDataReader^ reader2 = cmd2.ExecuteReader();
 
@@ -783,8 +834,9 @@ namespace MedicalStoreManagement {
 				String^ Date = reader2->GetDateTime(6).ToShortDateString();
 				String^ employeetype = reader2->GetString(8);
 				String^ gender = reader2->GetString(7);
+				String^ salary = reader2->GetInt32(9).ToString();
 
-				this->dataGridView1->Rows->Add(name, email, address, contact, Date, employeetype, gender);
+				this->dataGridView1->Rows->Add(name, email, address, contact, Date, employeetype, gender,salary);
 			}
 		}
 		catch (Exception^ e) {
@@ -795,67 +847,75 @@ namespace MedicalStoreManagement {
 	}
 
 		//called when add button is clicked
-	private: System::Void addButtonclick(System::Object^ sender, System::EventArgs^ e) {		
+	private: System::Void addButtonclick(System::Object^ sender, System::EventArgs^ e) {
 		String^ firstname = this->firstName->Text;
 		String^ lastname = this->lastName->Text;
 		String^ email = this->email->Text;
 		String^ address = this->address->Text;
 		String^ contact = this->contactNumber->Value.ToString();
 		String^ DOB = this->birthDate->Value.ToShortDateString();
-		String^ gender="null";
-		RadioButton^ checkedbutton =gcnew RadioButton();
+		String^ gender = "null";
+		Decimal initialsalary = this->initialSalary->Value;
+		RadioButton^ checkedbutton = gcnew RadioButton();
 
 		if (this->male->Checked) {
-			 gender = "Male";
-			 checkedbutton = this->male;
+			gender = "Male";
+			checkedbutton = this->male;
 		}
 		if (this->female->Checked) {
-			 gender = "Female";
-			 checkedbutton = this->female;
+			gender = "Female";
+			checkedbutton = this->female;
 		}
 		if (this->others->Checked) {
-			 gender = "Others";
-			 checkedbutton = this->others;
+			gender = "Others";
+			checkedbutton = this->others;
 		}
 
-		String^ employeerole = this->employeeRole->Text;	
-		
+		String^ employeerole = this->employeeRole->Text;
+
+		if (firstname->Length == 0 || lastname->Length == 0 || email->Length == 0 || address->Length == 0 || contact->Length == 0 ||
+			DOB->Length == 0 || gender->Length == 0 || employeerole->Length == 0) {
+			MessageBox::Show("All fields are not filled", "Please fill all the fields");
+		}
+		else {
 			try {
-			SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
-			connection.Open();
+				SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
+				connection.Open();
 
-			SqlCommand command("Insert into employees values ( @firstname, @lastname,@email, @address, @contact, @DOB,@gender,@employeerole)", % connection);
-			command.Parameters->AddWithValue("@firstname", firstname);
-			command.Parameters->AddWithValue("@lastname",lastname);
-			command.Parameters->AddWithValue("@email", email);
-			command.Parameters->AddWithValue("@address",address);
-			command.Parameters->AddWithValue("@contact",contact);
-			command.Parameters->AddWithValue("@DOB",DOB);
-			command.Parameters->AddWithValue("@gender",gender);
-			command.Parameters->AddWithValue("@employeerole",employeerole);
-			
-			command.ExecuteNonQuery();
-			connection.Close();
-			
-			this->firstName->Text = "";
-			this->lastName->Text = "";
-			this->email->Text = "";
-			this->address->Text = "";
-			this->contactNumber->Text = "";
-			this->birthDate->Text = "";
-			this->employeeRole->Text = "";
-			
+				SqlCommand command("Insert into employees values ( @firstname, @lastname,@email, @address, @contact, @DOB,@gender,@employeerole,@initialsalary)", % connection);
+				command.Parameters->AddWithValue("@firstname", firstname);
+				command.Parameters->AddWithValue("@lastname", lastname);
+				command.Parameters->AddWithValue("@email", email);
+				command.Parameters->AddWithValue("@address", address);
+				command.Parameters->AddWithValue("@contact", contact);
+				command.Parameters->AddWithValue("@DOB", DOB);
+				command.Parameters->AddWithValue("@gender", gender);
+				command.Parameters->AddWithValue("@employeerole", employeerole);
+				command.Parameters->AddWithValue("@initialsalary", initialsalary);
+
+				command.ExecuteNonQuery();
+				connection.Close();
+
+				this->firstName->Text = "";
+				this->lastName->Text = "";
+				this->email->Text = "";
+				this->address->Text = "";
+				this->contactNumber->Text = "";
+				this->birthDate->Text = "";
+				this->employeeRole->Text = "";
 				checkedbutton->Checked = false;
-		
-		}		
-		catch (NullReferenceException^ e) {
-			MessageBox::Show("All fields are not filled");
-		}
-		catch (SqlException^ e) {
-			MessageBox::Show("Invalid email");
-		}
 
-		searchEmployeeName_TextChanged(sender, e);
+				MessageBox::Show("Employee added successfully", "Added");
+			}
+			catch (NullReferenceException^ e) {
+				MessageBox::Show("All fields are not filled");
+			}
+			catch (SqlException^ e) {
+				MessageBox::Show("Invalid email");
+			}
+
+			searchEmployeeName_TextChanged(sender, e);
+		}
 	}
 
 		//called when remove button is clicked
@@ -922,11 +982,12 @@ namespace MedicalStoreManagement {
 				String^ contact = reader->GetString(5);
 				String^ Date = reader->GetDateTime(6).ToShortDateString();
 				String^ employeetype = reader->GetString(8);
-
 				String^ Gender = reader->GetString(7);
+				String^ initialsalary = reader->GetInt32(9).ToString();
+				
 				
 
-				this->dataGridView1->Rows->Add(name, email, address, contact, Date, Gender,employeetype); 
+				this->dataGridView1->Rows->Add(name, email, address, contact, Date, Gender,employeetype,initialsalary); 
 
 			}
 
@@ -935,15 +996,17 @@ namespace MedicalStoreManagement {
 			MessageBox::Show(" Some Error occured ");
 		}
 	}
-	
 
+	private: System::Void addkeypress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar==13) {
+		addButtonclick(sender, e);
+	}
+}
 
-
-
+	private: System::Void removekeypresss(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		if (e->KeyChar == 13) {
+			removeEmployee_Click(sender, e);
+		}
+}
 };
-
-	
-
-
-
 }
