@@ -5,7 +5,7 @@ using namespace System::Drawing::Drawing2D;
 using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Data::SqlClient;
-
+using namespace System::Data::SqlTypes;
 
 public ref class Tools {
 
@@ -23,6 +23,25 @@ public: System::Void static childForm(Form^ form,Panel^ panel) {
 	panel->Controls->Add(form);
 	form->BringToFront();
 	form->Show();
+}
+
+public: int static checkfornullvalues(SqlDataReader^ reader) { 
+	//check for the null values and returns the first element of the table if the value is not null
+	// if the value is null returns zero.
+
+	int temp;
+	try{
+		if (reader->Read()) {
+			temp = reader->GetInt32(0);
+		}
+		
+	}
+
+	catch (SqlNullValueException^ e) {
+		temp = 0;
+	}
+	return temp;
+
 }
 
 	  

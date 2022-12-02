@@ -67,29 +67,29 @@ namespace MedicalStoreManagement {
 			// 
 			this->button1->Location = System::Drawing::Point(356, 215);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(200, 23);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Admin";
+			this->button1->Text = L"Login as Admin";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &First::adminLoginButoon);
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(455, 311);
+			this->button2->Location = System::Drawing::Point(356, 164);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->Size = System::Drawing::Size(200, 23);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"User";
+			this->button2->Text = L"Login as User";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &First::userLoginButton);
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(236, 310);
+			this->button3->Location = System::Drawing::Point(356, 331);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(75, 23);
 			this->button3->TabIndex = 2;
-			this->button3->Text = L"cancel";
+			this->button3->Text = L"Exit";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &First::cancleButton);
 			// 

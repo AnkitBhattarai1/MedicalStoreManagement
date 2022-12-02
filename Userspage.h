@@ -24,7 +24,8 @@ namespace MedicalStoreManagement {
 
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Panel^ panel2;
-	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ userName;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Panel^ panel3;
 
@@ -45,7 +46,7 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::Label^ homeLabel;
 
 
-		   
+
 	public:
 		Userspage(void)
 		{
@@ -88,7 +89,7 @@ namespace MedicalStoreManagement {
 			this->sellMedicineButton = (gcnew ns1::BunifuFlatButton());
 			this->viewMedicineButton = (gcnew ns1::BunifuFlatButton());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->userName = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->homeLabel = (gcnew System::Windows::Forms::Label());
@@ -118,7 +119,8 @@ namespace MedicalStoreManagement {
 			// 
 			// panel3
 			// 
-			this->panel3->BackColor = System::Drawing::Color::Transparent;
+			this->panel3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->panel3->Controls->Add(this->logOutButton);
 			this->panel3->Controls->Add(this->medicineEntryButton);
 			this->panel3->Controls->Add(this->sellMedicineButton);
@@ -129,7 +131,6 @@ namespace MedicalStoreManagement {
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(250, 623);
 			this->panel3->TabIndex = 1;
-			this->panel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Userspage::panel3_Paint);
 			// 
 			// logOutButton
 			// 
@@ -141,7 +142,8 @@ namespace MedicalStoreManagement {
 				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->logOutButton->ActiveLineColor = System::Drawing::Color::Transparent;
 			this->logOutButton->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
-			this->logOutButton->BackColor = System::Drawing::Color::Transparent;
+			this->logOutButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->logOutButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logOutButton.BackgroundImage")));
 			this->logOutButton->ButtonText = L"Log out";
 			this->logOutButton->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -291,9 +293,9 @@ namespace MedicalStoreManagement {
 			// 
 			// panel2
 			// 
-			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(115)));
-			this->panel2->Controls->Add(this->label1);
+			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(179)));
+			this->panel2->Controls->Add(this->userName);
 			this->panel2->Controls->Add(this->pictureBox1);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel2->Location = System::Drawing::Point(0, 0);
@@ -301,18 +303,20 @@ namespace MedicalStoreManagement {
 			this->panel2->Size = System::Drawing::Size(250, 130);
 			this->panel2->TabIndex = 0;
 			// 
-			// label1
+			// userName
 			// 
-			this->label1->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->userName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(55)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(179)));
+			this->userName->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->userName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->label1->Location = System::Drawing::Point(0, 82);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(250, 48);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"user1";
-			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->userName->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->userName->Location = System::Drawing::Point(0, 82);
+			this->userName->Name = L"userName";
+			this->userName->Size = System::Drawing::Size(250, 48);
+			this->userName->TabIndex = 1;
+			this->userName->Text = L"user1";
+			this->userName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// pictureBox1
 			// 
@@ -335,19 +339,21 @@ namespace MedicalStoreManagement {
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(1082, 80);
 			this->panel4->TabIndex = 1;
-			this->panel4->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Userspage::homePanelPaint);
 			// 
 			// homeLabel
 			// 
+			this->homeLabel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->homeLabel->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->homeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->homeLabel->ForeColor = System::Drawing::Color::White;
 			this->homeLabel->Location = System::Drawing::Point(0, 0);
 			this->homeLabel->Name = L"homeLabel";
 			this->homeLabel->Size = System::Drawing::Size(1082, 80);
 			this->homeLabel->TabIndex = 0;
 			this->homeLabel->Text = L"HOME";
-			this->homeLabel->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->homeLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// panel5
 			// 
@@ -386,8 +392,8 @@ namespace MedicalStoreManagement {
 			// Userspage
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(61)), static_cast<System::Int32>(static_cast<System::Byte>(196)),
-				static_cast<System::Int32>(static_cast<System::Byte>(190)));
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->ClientSize = System::Drawing::Size(1332, 753);
 			this->Controls->Add(this->panel5);
 			this->Controls->Add(this->panel4);
@@ -423,24 +429,18 @@ namespace MedicalStoreManagement {
 		Tools::Lineargradientpaint(sender, e, rect, 196, 232, 194, 70, 160, 148, LinearGradientMode::Vertical);
 	}
 
-	private: System::Void homePanelPaint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-		Rectangle rect(0, 0, this->Width, this->Height);
-		Tools::Lineargradientpaint(sender, e, rect, 98, 79, 130, 63, 59, 108, LinearGradientMode::Vertical);
-	}
-
-	private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-		Rectangle rect(0, 0, this->Width, this->Height);
-		Tools::Lineargradientpaint(sender, e, rect, 98, 79, 130, 63, 59, 108, LinearGradientMode::Vertical);
-	}
+	
 
 	private: System::Void Userspage_Load(System::Object^ sender, System::EventArgs^ e) {
 
 		if (role == "seller") {  // checks whats the role of the user		
 			this->medicineEntryButton->Hide();
+			this->userName->Text = "Seller";
 		}
 		else if (role = "Data") {
 			this->sellMedicineButton->Hide();
 			this->viewMedicineButton->Hide();
+			this->userName-> Text= "Data entry Clerk";
 		}
 
 	}
@@ -472,10 +472,10 @@ namespace MedicalStoreManagement {
 
 	}
 
-
 	private: System::Void logoutButtonClick(Object^ sender, EventArgs^ e) {
 		this->Close();
 	}
+	
 };
 
 

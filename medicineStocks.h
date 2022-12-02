@@ -42,6 +42,7 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+	private: ns1::BunifuThinButton2^ searchMedicineButton;
 	protected:
 
 	private:
@@ -61,6 +62,7 @@ namespace MedicalStoreManagement {
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(medicineStocks::typeid));
 			this->bunifuCustomLabel1 = (gcnew ns1::BunifuCustomLabel());
 			this->searchmedicineName = (gcnew ns1::BunifuMaterialTextbox());
 			this->dataGridView1 = (gcnew ns1::BunifuCustomDataGrid());
@@ -68,6 +70,7 @@ namespace MedicalStoreManagement {
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->searchMedicineButton = (gcnew ns1::BunifuThinButton2());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -76,6 +79,8 @@ namespace MedicalStoreManagement {
 			this->bunifuCustomLabel1->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->bunifuCustomLabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->bunifuCustomLabel1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->bunifuCustomLabel1->Location = System::Drawing::Point(12, 19);
 			this->bunifuCustomLabel1->Name = L"bunifuCustomLabel1";
 			this->bunifuCustomLabel1->Size = System::Drawing::Size(264, 44);
@@ -88,10 +93,10 @@ namespace MedicalStoreManagement {
 			this->searchmedicineName->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->searchmedicineName->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->searchmedicineName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
-			this->searchmedicineName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->searchmedicineName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(10)),
-				static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->searchmedicineName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->searchmedicineName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->searchmedicineName->HintText = L"Enter the name of medicine here";
 			this->searchmedicineName->isPassword = false;
 			this->searchmedicineName->LineFocusedColor = System::Drawing::Color::Blue;
@@ -119,7 +124,8 @@ namespace MedicalStoreManagement {
 			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->dataGridView1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::Color::SeaGreen;
+			dataGridViewCellStyle2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::White;
@@ -137,8 +143,7 @@ namespace MedicalStoreManagement {
 			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Window;
 			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::Black;
 			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
 			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
@@ -146,9 +151,10 @@ namespace MedicalStoreManagement {
 			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->dataGridView1->DoubleBuffered = true;
 			this->dataGridView1->EnableHeadersVisualStyles = false;
-			this->dataGridView1->HeaderBgColor = System::Drawing::Color::SeaGreen;
+			this->dataGridView1->HeaderBgColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->dataGridView1->HeaderForeColor = System::Drawing::Color::White;
-			this->dataGridView1->Location = System::Drawing::Point(0, 115);
+			this->dataGridView1->Location = System::Drawing::Point(0, 147);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Sunken;
 			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
@@ -162,7 +168,7 @@ namespace MedicalStoreManagement {
 			this->dataGridView1->RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this->dataGridView1->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToDisplayedHeaders;
 			this->dataGridView1->RowTemplate->Height = 30;
-			this->dataGridView1->Size = System::Drawing::Size(1205, 498);
+			this->dataGridView1->Size = System::Drawing::Size(1205, 466);
 			this->dataGridView1->TabIndex = 5;
 			// 
 			// Column1
@@ -189,13 +195,45 @@ namespace MedicalStoreManagement {
 			this->Column4->MinimumWidth = 6;
 			this->Column4->Name = L"Column4";
 			// 
+			// searchMedicineButton
+			// 
+			this->searchMedicineButton->ActiveBorderThickness = 2;
+			this->searchMedicineButton->ActiveCornerRadius = 20;
+			this->searchMedicineButton->ActiveFillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->searchMedicineButton->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
+				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->searchMedicineButton->ActiveLineColor = System::Drawing::Color::Transparent;
+			this->searchMedicineButton->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->searchMedicineButton->BackColor = System::Drawing::Color::MistyRose;
+			this->searchMedicineButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"searchMedicineButton.BackgroundImage")));
+			this->searchMedicineButton->ButtonText = L"Search";
+			this->searchMedicineButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->searchMedicineButton->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->searchMedicineButton->ForeColor = System::Drawing::Color::Transparent;
+			this->searchMedicineButton->IdleBorderThickness = 2;
+			this->searchMedicineButton->IdleCornerRadius = 15;
+			this->searchMedicineButton->IdleFillColor = System::Drawing::Color::Empty;
+			this->searchMedicineButton->IdleForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->searchMedicineButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(238)));
+			this->searchMedicineButton->Location = System::Drawing::Point(630, 72);
+			this->searchMedicineButton->Margin = System::Windows::Forms::Padding(5);
+			this->searchMedicineButton->Name = L"searchMedicineButton";
+			this->searchMedicineButton->Size = System::Drawing::Size(195, 57);
+			this->searchMedicineButton->TabIndex = 21;
+			this->searchMedicineButton->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->searchMedicineButton->Click += gcnew System::EventHandler(this, &medicineStocks::searchmedicineName_OnValueChanged);
+			// 
 			// medicineStocks
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->BackColor = System::Drawing::Color::MistyRose;
 			this->ClientSize = System::Drawing::Size(1205, 613);
+			this->Controls->Add(this->searchMedicineButton);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->searchmedicineName);
 			this->Controls->Add(this->bunifuCustomLabel1);
@@ -219,26 +257,27 @@ namespace MedicalStoreManagement {
 			this->dataGridView1->Rows->Add(reader->GetString(1), reader->GetInt32(4).ToString(), reader->GetString(5),reader->GetInt32(6).ToString());
 
 		}
-		}
-
-	private: System::Void searchmedicineName_OnValueChanged(System::Object^ sender, System::EventArgs^ e) {
-	String^ name = this->searchmedicineName->Text;
-	SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
-	connection.Open();
-
-	SqlCommand cmd("Select * from medicine_stock where medicine_name like @name+'%'",%connection);
-	cmd.Parameters->AddWithValue("@name", name);
-
-	SqlDataReader^ reader= cmd.ExecuteReader();
-	while (reader->Read()) {
-		this->dataGridView1->Rows->Clear();
-		this->dataGridView1->Rows->Add(reader->GetString(1), reader->GetInt32(4).ToString(), reader->GetString(5), reader->GetInt32(6).ToString());
-
 	}
+
+	public: System::Void searchmedicineName_OnValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	 	this->dataGridView1->Rows->Clear();
+		String^ name = this->searchmedicineName->Text;
+		SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
+		connection.Open();
+
+		SqlCommand cmd("Select * from medicine_stock where medicine_name like @name +'%' ", % connection);
+		cmd.Parameters->AddWithValue("@name", name);
+
+		SqlDataReader^ reader = cmd.ExecuteReader();
+		while (reader->Read()) {
+			this->dataGridView1->Rows->Add(reader->GetString(1), reader->GetInt32(4).ToString(), reader->GetString(5), reader->GetInt32(6).ToString());
+
+		}
 
 
 	}
 	
+
 
 };
 }

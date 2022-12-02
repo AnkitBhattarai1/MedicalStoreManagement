@@ -1,4 +1,6 @@
 #pragma once
+#include"Tools.h"
+#include"Bill.h"
 
 namespace MedicalStoreManagement {
 
@@ -9,6 +11,7 @@ namespace MedicalStoreManagement {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Data::SqlClient;
+	
 	/// <summary>
 	/// Summary for sellMedicine
 	/// </summary>
@@ -51,6 +54,7 @@ namespace MedicalStoreManagement {
 	private: ns1::BunifuThinButton2^ sellButton;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::NumericUpDown^ discount;
+	private: ns1::BunifuThinButton2^ printButton;
 
 	protected:
 
@@ -81,6 +85,7 @@ namespace MedicalStoreManagement {
 			this->sellButton = (gcnew ns1::BunifuThinButton2());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->discount = (gcnew System::Windows::Forms::NumericUpDown());
+			this->printButton = (gcnew ns1::BunifuThinButton2());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->customerContact))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->stockAmount))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->discount))->BeginInit();
@@ -93,20 +98,18 @@ namespace MedicalStoreManagement {
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(12, 47);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(266, 41);
+			this->label1->Size = System::Drawing::Size(292, 41);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Name of Customer:";
 			// 
 			// customerName
 			// 
-			this->customerName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->customerName->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->customerName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
-			this->customerName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->customerName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->customerName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->customerName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->customerName->HintText = L"";
 			this->customerName->isPassword = false;
 			this->customerName->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
@@ -115,7 +118,7 @@ namespace MedicalStoreManagement {
 			this->customerName->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->customerName->LineThickness = 3;
-			this->customerName->Location = System::Drawing::Point(285, 47);
+			this->customerName->Location = System::Drawing::Point(332, 47);
 			this->customerName->Margin = System::Windows::Forms::Padding(4);
 			this->customerName->Name = L"customerName";
 			this->customerName->Size = System::Drawing::Size(348, 41);
@@ -136,8 +139,10 @@ namespace MedicalStoreManagement {
 			// medicineName
 			// 
 			this->medicineName->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->medicineName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->medicineName->FormattingEnabled = true;
-			this->medicineName->Location = System::Drawing::Point(285, 262);
+			this->medicineName->Location = System::Drawing::Point(332, 262);
 			this->medicineName->Name = L"medicineName";
 			this->medicineName->Size = System::Drawing::Size(348, 24);
 			this->medicineName->TabIndex = 24;
@@ -177,14 +182,12 @@ namespace MedicalStoreManagement {
 			// 
 			// customerAddress
 			// 
-			this->customerAddress->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->customerAddress->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->customerAddress->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
-			this->customerAddress->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->customerAddress->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->customerAddress->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->customerAddress->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->customerAddress->HintText = L"";
 			this->customerAddress->isPassword = false;
 			this->customerAddress->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
@@ -193,7 +196,7 @@ namespace MedicalStoreManagement {
 			this->customerAddress->LineMouseHoverColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->customerAddress->LineThickness = 3;
-			this->customerAddress->Location = System::Drawing::Point(285, 188);
+			this->customerAddress->Location = System::Drawing::Point(332, 188);
 			this->customerAddress->Margin = System::Windows::Forms::Padding(4);
 			this->customerAddress->Name = L"customerAddress";
 			this->customerAddress->Size = System::Drawing::Size(348, 41);
@@ -202,7 +205,9 @@ namespace MedicalStoreManagement {
 			// 
 			// customerContact
 			// 
-			this->customerContact->Location = System::Drawing::Point(285, 139);
+			this->customerContact->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->customerContact->Location = System::Drawing::Point(332, 139);
 			this->customerContact->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1410065407, 2, 0, 0 });
 			this->customerContact->Name = L"customerContact";
 			this->customerContact->Size = System::Drawing::Size(348, 22);
@@ -210,7 +215,9 @@ namespace MedicalStoreManagement {
 			// 
 			// stockAmount
 			// 
-			this->stockAmount->Location = System::Drawing::Point(284, 326);
+			this->stockAmount->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->stockAmount->Location = System::Drawing::Point(331, 326);
 			this->stockAmount->Name = L"stockAmount";
 			this->stockAmount->Size = System::Drawing::Size(348, 22);
 			this->stockAmount->TabIndex = 31;
@@ -224,9 +231,7 @@ namespace MedicalStoreManagement {
 			this->sellButton->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
 				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->sellButton->ActiveLineColor = System::Drawing::Color::Transparent;
-			this->sellButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->sellButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->sellButton->BackColor = System::Drawing::Color::MistyRose;
 			this->sellButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"sellButton.BackgroundImage")));
 			this->sellButton->ButtonText = L"Check Out";
 			this->sellButton->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -236,10 +241,11 @@ namespace MedicalStoreManagement {
 			this->sellButton->IdleBorderThickness = 2;
 			this->sellButton->IdleCornerRadius = 15;
 			this->sellButton->IdleFillColor = System::Drawing::Color::Empty;
-			this->sellButton->IdleForecolor = System::Drawing::Color::Transparent;
-			this->sellButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->sellButton->Location = System::Drawing::Point(774, 417);
+			this->sellButton->IdleForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->sellButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
+			this->sellButton->Location = System::Drawing::Point(484, 431);
 			this->sellButton->Margin = System::Windows::Forms::Padding(5);
 			this->sellButton->Name = L"sellButton";
 			this->sellButton->Size = System::Drawing::Size(195, 57);
@@ -260,18 +266,52 @@ namespace MedicalStoreManagement {
 			// 
 			// discount
 			// 
-			this->discount->Location = System::Drawing::Point(284, 390);
+			this->discount->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->discount->Location = System::Drawing::Point(331, 390);
 			this->discount->Name = L"discount";
 			this->discount->Size = System::Drawing::Size(348, 22);
 			this->discount->TabIndex = 34;
+			// 
+			// printButton
+			// 
+			this->printButton->ActiveBorderThickness = 2;
+			this->printButton->ActiveCornerRadius = 20;
+			this->printButton->ActiveFillColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->printButton->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
+				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->printButton->ActiveLineColor = System::Drawing::Color::Transparent;
+			this->printButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->printButton->BackColor = System::Drawing::Color::MistyRose;
+			this->printButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"printButton.BackgroundImage")));
+			this->printButton->ButtonText = L"Print Bill";
+			this->printButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->printButton->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->printButton->ForeColor = System::Drawing::Color::Transparent;
+			this->printButton->IdleBorderThickness = 2;
+			this->printButton->IdleCornerRadius = 15;
+			this->printButton->IdleFillColor = System::Drawing::Color::Empty;
+			this->printButton->IdleForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->printButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
+			this->printButton->Location = System::Drawing::Point(1032, 520);
+			this->printButton->Margin = System::Windows::Forms::Padding(5);
+			this->printButton->Name = L"printButton";
+			this->printButton->Size = System::Drawing::Size(195, 57);
+			this->printButton->TabIndex = 35;
+			this->printButton->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->printButton->Click += gcnew System::EventHandler(this, &sellMedicine::printButton_Click);
 			// 
 			// sellMedicine
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->BackColor = System::Drawing::Color::MistyRose;
 			this->ClientSize = System::Drawing::Size(1241, 604);
+			this->Controls->Add(this->printButton);
 			this->Controls->Add(this->discount);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->sellButton);
@@ -297,6 +337,7 @@ namespace MedicalStoreManagement {
 		}
 #pragma endregion
 
+		Bill bill;
 		
 	private: System::Void sellMedicine_Load(System::Object^ sender, System::EventArgs^ e) {
 		SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
@@ -310,15 +351,16 @@ namespace MedicalStoreManagement {
 		dt->Load(reader);
 		this->medicineName->ValueMember = "medicine_name";
 		this->medicineName->DataSource = dt;
+		//.....
 
 	}
-
 
 	private: System::Void sellButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ customername = this->customerName->Text;
 		String^ customerContact = this->customerContact->Value.ToString();
 		String^ customeraddress = this->customerAddress->Text;
 		String^ purchasedate = DateTime::Today.ToShortDateString();
+		String^ medicinename = this->medicineName->Text;
 		Decimal stockamount = this->stockAmount->Value;
 		Decimal discount = this->discount->Value;
 		int medicineid;
@@ -326,77 +368,95 @@ namespace MedicalStoreManagement {
 		int customerid;
 		int availablestock;
 
-		//gets the medicine id and retail prize from medicine_stock table
-		SqlConnection connection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Mydatabase;Integrated Security=True");
-		connection.Open();
+		try {
+			//gets the medicine id and retail prize from medicine_stock table
+			SqlConnection connection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Mydatabase;Integrated Security=True");
+			connection.Open();
 
-		SqlCommand cmd1("Select medicine_id,retail_price,available_stock from medicine_stock where medicine_name = @name",%connection);
-		cmd1.Parameters->AddWithValue("@name", this->medicineName->Text);
-		SqlDataReader^  reader = cmd1.ExecuteReader();
-		
-		if (reader->Read()) {
-			medicineid = reader->GetInt32(0);
-			 retailprize = reader->GetInt32(1);
-			 availablestock = reader->GetInt32(2);
+			SqlCommand cmd1("Select medicine_id,retail_price,available_stock from medicine_stock where medicine_name = @name", % connection);
+			cmd1.Parameters->AddWithValue("@name", medicinename);
+			SqlDataReader^ reader = cmd1.ExecuteReader();
 
-			 reader->Close();
-		}
-		else {
-			reader->Close();
-		}
+			if (reader->Read()) {
+				medicineid = reader->GetInt32(0);
+				retailprize = reader->GetInt32(1);
+				availablestock = reader->GetInt32(2);
 
-		if (availablestock < stockamount) {
-			MessageBox::Show("Not Enough stock Available", "Out of Stock");
-		}
-		else {
-
-			Decimal totalprize = (Decimal)retailprize * stockamount;
-			Decimal transactionprize = totalprize;
-			///...
-
-			//inset into customer table
-			SqlCommand cmd("Insert into customer values( @medicineid, @name,@contact, @address, @purchasedate)", % connection);
-			cmd.Parameters->AddWithValue("@name", customername);
-			cmd.Parameters->AddWithValue("@medicineid", medicineid);
-			cmd.Parameters->AddWithValue("@contact", customerContact);
-			cmd.Parameters->AddWithValue("@address", customeraddress);
-			cmd.Parameters->AddWithValue("@purchasedate", purchasedate);
-			cmd.ExecuteNonQuery();
-			//...
-
-			//MessageBox::Show("Totalprize::" + (Decimal)retailprize * stockamount);
-
-			//gets the customer_id from customer table
-			SqlCommand cmd3("Select customer_id from customer where name = @name", % connection);
-			cmd3.Parameters->AddWithValue("@name", customername);
-			customerid = (int)cmd3.ExecuteScalar();
-			//.....
-
-
-			if (discount != 0) {
-				transactionprize = totalprize * (1 - (discount / 100));
+				reader->Close();
+			}
+			else {
+				reader->Close();
 			}
 
-			//insert into the sales table..
-			SqlCommand cmd2("Insert into sales values(@customerid,@medicineid,@totalprize,@discount,@transactionprice)", % connection);
-			cmd2.Parameters->AddWithValue("@customerid", customerid);
-			cmd2.Parameters->AddWithValue("medicineid", medicineid);
-			cmd2.Parameters->AddWithValue("@totalprize", totalprize);
-			cmd2.Parameters->AddWithValue("@discount", discount);
-			cmd2.Parameters->AddWithValue("@transactionprice", transactionprize);
-			cmd2.ExecuteNonQuery();
-			//.....
+			if (availablestock < stockamount) {
+				MessageBox::Show("Not Enough stock Available", "Out of Stock");
+			}
+			else {
 
-			//update the medicine_stock table
+				Decimal totalprize = (Decimal)retailprize * stockamount;
+				Decimal transactionprize = totalprize;
+				///...
 
-			SqlCommand cmd4("Update  medicine_stock set available_stock = available_stock-@stockamount", % connection);
-			cmd4.Parameters->AddWithValue("@stockamount", stockamount);
-			cmd4.ExecuteNonQuery();
+				//inset into customer table
+				SqlCommand cmd("Insert into customer values( @medicineid, @name,@contact, @address, @purchasedate)", % connection);
+				cmd.Parameters->AddWithValue("@name", customername);
+				cmd.Parameters->AddWithValue("@medicineid", medicineid);
+				cmd.Parameters->AddWithValue("@contact", customerContact);
+				cmd.Parameters->AddWithValue("@address", customeraddress);
+				cmd.Parameters->AddWithValue("@purchasedate", purchasedate);
+				cmd.ExecuteNonQuery();
+				//...
 
-			MessageBox::Show("The Prize is: " + transactionprize);
+				//MessageBox::Show("Totalprize::" + (Decimal)retailprize * stockamount);
+
+				//gets the customer_id from customer table
+				SqlCommand cmd3("Select customer_id from customer where name = @name", % connection);
+				cmd3.Parameters->AddWithValue("@name", customername);
+				customerid = (int)cmd3.ExecuteScalar();
+				//.....
+
+
+				if (discount != 0) {
+					transactionprize = totalprize * (1 - (discount / 100));
+				}
+
+				//insert into the sales table..
+				SqlCommand cmd2("Insert into sales values(@customerid,@medicineid,@totalprize,@discount,@transactionprice,@date)", % connection);
+				cmd2.Parameters->AddWithValue("@customerid", customerid);
+				cmd2.Parameters->AddWithValue("medicineid", medicineid);
+				cmd2.Parameters->AddWithValue("@totalprize", totalprize);
+				cmd2.Parameters->AddWithValue("@discount", discount);
+				cmd2.Parameters->AddWithValue("@transactionprice", transactionprize);
+				cmd2.Parameters->AddWithValue("@date", DateTime::Today.ToShortDateString());
+				cmd2.ExecuteNonQuery();
+				//.....
+
+				//update the medicine_stock table
+
+				SqlCommand cmd4("Update  medicine_stock set available_stock = available_stock-@stockamount", % connection);
+				cmd4.Parameters->AddWithValue("@stockamount", stockamount);
+				cmd4.ExecuteNonQuery();
+
+				MessageBox::Show("The Prize is: " + transactionprize);
+				//....
+
+				//sets the data in the bill
+				bill.nameofCustomer->Text = customername;
+				bill.addressofcustomer->Text= customeraddress;
+				bill.dataGridView1->Rows->Add(medicinename, retailprize, stockamount, discount, transactionprize);
+
+			}
+		}
+		catch(Exception^ e) {
+			MessageBox::Show("Some error occured");
 
 		}
 	}
 
+
+	private: System::Void printButton_Click(System::Object^ sender, System::EventArgs^ e) {	
+	bill.ShowDialog();
+
+}
 };
 }

@@ -87,8 +87,8 @@ namespace MedicalStoreManagement {
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Suppliers::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPageaddcompany = (gcnew System::Windows::Forms::TabPage());
 			this->contactno = (gcnew System::Windows::Forms::NumericUpDown());
@@ -137,8 +137,7 @@ namespace MedicalStoreManagement {
 			// 
 			// tabPageaddcompany
 			// 
-			this->tabPageaddcompany->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
-				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->tabPageaddcompany->BackColor = System::Drawing::Color::MistyRose;
 			this->tabPageaddcompany->Controls->Add(this->contactno);
 			this->tabPageaddcompany->Controls->Add(this->bunifuCustomLabel4);
 			this->tabPageaddcompany->Controls->Add(this->addCompany);
@@ -152,13 +151,14 @@ namespace MedicalStoreManagement {
 			this->tabPageaddcompany->Size = System::Drawing::Size(1215, 602);
 			this->tabPageaddcompany->TabIndex = 0;
 			this->tabPageaddcompany->Text = L"Add Company";
+
+
 			// 
 			// contactno
 			// 
-			this->contactno->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(130)));
-			this->contactno->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->contactno->BackColor = System::Drawing::Color::MistyRose;
+			this->contactno->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(3)), static_cast<System::Int32>(static_cast<System::Byte>(218)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->contactno->Location = System::Drawing::Point(297, 197);
 			this->contactno->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1410065407, 2, 0, 0 });
 			this->contactno->Name = L"contactno";
@@ -170,8 +170,8 @@ namespace MedicalStoreManagement {
 			// 
 			this->bunifuCustomLabel4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuCustomLabel4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->bunifuCustomLabel4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->bunifuCustomLabel4->Location = System::Drawing::Point(8, 182);
 			this->bunifuCustomLabel4->Name = L"bunifuCustomLabel4";
 			this->bunifuCustomLabel4->Size = System::Drawing::Size(283, 44);
@@ -188,8 +188,7 @@ namespace MedicalStoreManagement {
 			this->addCompany->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
 				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->addCompany->ActiveLineColor = System::Drawing::Color::Transparent;
-			this->addCompany->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->addCompany->BackColor = System::Drawing::Color::MistyRose;
 			this->addCompany->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"addCompany.BackgroundImage")));
 			this->addCompany->ButtonText = L"Add Company";
 			this->addCompany->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -199,9 +198,10 @@ namespace MedicalStoreManagement {
 			this->addCompany->IdleBorderThickness = 2;
 			this->addCompany->IdleCornerRadius = 15;
 			this->addCompany->IdleFillColor = System::Drawing::Color::Empty;
-			this->addCompany->IdleForecolor = System::Drawing::Color::Transparent;
-			this->addCompany->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->addCompany->IdleForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(3)), static_cast<System::Int32>(static_cast<System::Byte>(218)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->addCompany->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->addCompany->Location = System::Drawing::Point(462, 266);
 			this->addCompany->Margin = System::Windows::Forms::Padding(5);
 			this->addCompany->Name = L"addCompany";
@@ -212,14 +212,13 @@ namespace MedicalStoreManagement {
 			// 
 			// companyAddress
 			// 
-			this->companyAddress->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(130)));
+			this->companyAddress->BackColor = System::Drawing::Color::MistyRose;
 			this->companyAddress->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->companyAddress->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
 			this->companyAddress->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->companyAddress->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->companyAddress->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(3)),
+				static_cast<System::Int32>(static_cast<System::Byte>(218)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->companyAddress->HintText = L"Enter the location of the company";
 			this->companyAddress->isPassword = false;
 			this->companyAddress->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
@@ -238,14 +237,13 @@ namespace MedicalStoreManagement {
 			// 
 			// companyName
 			// 
-			this->companyName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->companyName->BackColor = System::Drawing::Color::MistyRose;
 			this->companyName->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->companyName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->companyName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->companyName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->companyName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(3)), static_cast<System::Int32>(static_cast<System::Byte>(218)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->companyName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(3)), static_cast<System::Int32>(static_cast<System::Byte>(218)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->companyName->HintText = L"Enter the name of the company";
 			this->companyName->isPassword = false;
 			this->companyName->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
@@ -266,8 +264,8 @@ namespace MedicalStoreManagement {
 			// 
 			this->bunifuCustomLabel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuCustomLabel2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->bunifuCustomLabel2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->bunifuCustomLabel2->Location = System::Drawing::Point(8, 113);
 			this->bunifuCustomLabel2->Name = L"bunifuCustomLabel2";
 			this->bunifuCustomLabel2->Size = System::Drawing::Size(283, 44);
@@ -279,8 +277,8 @@ namespace MedicalStoreManagement {
 			// 
 			this->bunifuCustomLabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuCustomLabel1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->bunifuCustomLabel1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->bunifuCustomLabel1->Location = System::Drawing::Point(3, 44);
 			this->bunifuCustomLabel1->Name = L"bunifuCustomLabel1";
 			this->bunifuCustomLabel1->Size = System::Drawing::Size(283, 44);
@@ -290,8 +288,7 @@ namespace MedicalStoreManagement {
 			// 
 			// tabPage2
 			// 
-			this->tabPage2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->tabPage2->BackColor = System::Drawing::Color::MistyRose;
 			this->tabPage2->Controls->Add(this->removeEmployeeButton);
 			this->tabPage2->Controls->Add(this->removeCompanyName);
 			this->tabPage2->Controls->Add(this->bunifuCustomLabel5);
@@ -311,20 +308,21 @@ namespace MedicalStoreManagement {
 			this->removeEmployeeButton->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
 				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->removeEmployeeButton->ActiveLineColor = System::Drawing::Color::Transparent;
-			this->removeEmployeeButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
-				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->removeEmployeeButton->BackColor = System::Drawing::Color::MistyRose;
 			this->removeEmployeeButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"removeEmployeeButton.BackgroundImage")));
 			this->removeEmployeeButton->ButtonText = L"Remove";
 			this->removeEmployeeButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->removeEmployeeButton->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->removeEmployeeButton->ForeColor = System::Drawing::Color::Cyan;
+			this->removeEmployeeButton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->removeEmployeeButton->IdleBorderThickness = 2;
 			this->removeEmployeeButton->IdleCornerRadius = 15;
 			this->removeEmployeeButton->IdleFillColor = System::Drawing::Color::Empty;
-			this->removeEmployeeButton->IdleForecolor = System::Drawing::Color::Cyan;
-			this->removeEmployeeButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->removeEmployeeButton->IdleForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(218)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->removeEmployeeButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->removeEmployeeButton->Location = System::Drawing::Point(586, 85);
 			this->removeEmployeeButton->Margin = System::Windows::Forms::Padding(5);
 			this->removeEmployeeButton->Name = L"removeEmployeeButton";
@@ -335,14 +333,13 @@ namespace MedicalStoreManagement {
 			// 
 			// removeCompanyName
 			// 
-			this->removeCompanyName->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
-				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->removeCompanyName->BackColor = System::Drawing::Color::MistyRose;
 			this->removeCompanyName->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->removeCompanyName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11));
 			this->removeCompanyName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->removeCompanyName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->removeCompanyName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->removeCompanyName->HintText = L"";
 			this->removeCompanyName->isPassword = false;
 			this->removeCompanyName->LineFocusedColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
@@ -363,7 +360,8 @@ namespace MedicalStoreManagement {
 			// 
 			this->bunifuCustomLabel5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->bunifuCustomLabel5->ForeColor = System::Drawing::Color::Cyan;
+			this->bunifuCustomLabel5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->bunifuCustomLabel5->Location = System::Drawing::Point(9, 32);
 			this->bunifuCustomLabel5->Name = L"bunifuCustomLabel5";
 			this->bunifuCustomLabel5->Size = System::Drawing::Size(273, 44);
@@ -373,8 +371,7 @@ namespace MedicalStoreManagement {
 			// 
 			// tabPage3
 			// 
-			this->tabPage3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->tabPage3->BackColor = System::Drawing::Color::MistyRose;
 			this->tabPage3->Controls->Add(this->searchButton);
 			this->tabPage3->Controls->Add(this->bunifuCustomDataGrid1);
 			this->tabPage3->Controls->Add(this->searchCompanyName);
@@ -395,8 +392,7 @@ namespace MedicalStoreManagement {
 			this->searchButton->ActiveForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)),
 				static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->searchButton->ActiveLineColor = System::Drawing::Color::Transparent;
-			this->searchButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->searchButton->BackColor = System::Drawing::Color::MistyRose;
 			this->searchButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"searchButton.BackgroundImage")));
 			this->searchButton->ButtonText = L"Search";
 			this->searchButton->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -406,9 +402,10 @@ namespace MedicalStoreManagement {
 			this->searchButton->IdleBorderThickness = 2;
 			this->searchButton->IdleCornerRadius = 15;
 			this->searchButton->IdleFillColor = System::Drawing::Color::Empty;
-			this->searchButton->IdleForecolor = System::Drawing::Color::Transparent;
-			this->searchButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->searchButton->IdleForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->searchButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->searchButton->Location = System::Drawing::Point(534, 93);
 			this->searchButton->Margin = System::Windows::Forms::Padding(5);
 			this->searchButton->Name = L"searchButton";
@@ -423,22 +420,23 @@ namespace MedicalStoreManagement {
 			this->bunifuCustomDataGrid1->AllowUserToDeleteRows = false;
 			this->bunifuCustomDataGrid1->AllowUserToResizeColumns = false;
 			this->bunifuCustomDataGrid1->AllowUserToResizeRows = false;
-			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
+			dataGridViewCellStyle3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
 				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->bunifuCustomDataGrid1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this->bunifuCustomDataGrid1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this->bunifuCustomDataGrid1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->bunifuCustomDataGrid1->BackgroundColor = System::Drawing::Color::Gainsboro;
 			this->bunifuCustomDataGrid1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->bunifuCustomDataGrid1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::Color::SeaGreen;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->bunifuCustomDataGrid1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->bunifuCustomDataGrid1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this->bunifuCustomDataGrid1->ColumnHeadersHeight = 30;
 			this->bunifuCustomDataGrid1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
 			this->bunifuCustomDataGrid1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
@@ -448,7 +446,8 @@ namespace MedicalStoreManagement {
 			this->bunifuCustomDataGrid1->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->bunifuCustomDataGrid1->DoubleBuffered = true;
 			this->bunifuCustomDataGrid1->EnableHeadersVisualStyles = false;
-			this->bunifuCustomDataGrid1->HeaderBgColor = System::Drawing::Color::SeaGreen;
+			this->bunifuCustomDataGrid1->HeaderBgColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->bunifuCustomDataGrid1->HeaderForeColor = System::Drawing::Color::White;
 			this->bunifuCustomDataGrid1->Location = System::Drawing::Point(3, 173);
 			this->bunifuCustomDataGrid1->Name = L"bunifuCustomDataGrid1";
@@ -649,6 +648,7 @@ namespace MedicalStoreManagement {
 		   }	  
 
 }
+
 
 
 };

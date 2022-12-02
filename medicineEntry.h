@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 namespace MedicalStoreManagement {
 
 	using namespace System;
@@ -67,6 +69,13 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::NumericUpDown^ perPiecePrize;
 	private: System::Windows::Forms::NumericUpDown^ totalStock;
 	private: ns1::BunifuThinButton2^ addButton;
+	private: ns1::BunifuCustomDataGrid^ dataGridView1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+	private: ns1::BunifuMaterialTextbox^ searchmedicineName;
+	private: ns1::BunifuCustomLabel^ bunifuCustomLabel4;
 
 
 
@@ -79,7 +88,7 @@ namespace MedicalStoreManagement {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -89,6 +98,9 @@ namespace MedicalStoreManagement {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(medicineEntry::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->addButton = (gcnew ns1::BunifuThinButton2());
@@ -107,10 +119,19 @@ namespace MedicalStoreManagement {
 			this->medicineName = (gcnew ns1::BunifuMaterialTextbox());
 			this->bunifuCustomLabel1 = (gcnew ns1::BunifuCustomLabel());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->dataGridView1 = (gcnew ns1::BunifuCustomDataGrid());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->searchmedicineName = (gcnew ns1::BunifuMaterialTextbox());
+			this->bunifuCustomLabel4 = (gcnew ns1::BunifuCustomLabel());
 			this->tabControl1->SuspendLayout();
 			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->perPiecePrize))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->totalStock))->BeginInit();
+			this->tabPage1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// tabControl1
@@ -131,8 +152,7 @@ namespace MedicalStoreManagement {
 			// 
 			// tabPage2
 			// 
-			this->tabPage2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->tabPage2->BackColor = System::Drawing::Color::MistyRose;
 			this->tabPage2->Controls->Add(this->addButton);
 			this->tabPage2->Controls->Add(this->perPiecePrize);
 			this->tabPage2->Controls->Add(this->totalStock);
@@ -148,6 +168,8 @@ namespace MedicalStoreManagement {
 			this->tabPage2->Controls->Add(this->bunifuCustomLabel2);
 			this->tabPage2->Controls->Add(this->medicineName);
 			this->tabPage2->Controls->Add(this->bunifuCustomLabel1);
+			this->tabPage2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->tabPage2->Location = System::Drawing::Point(4, 54);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
@@ -165,8 +187,7 @@ namespace MedicalStoreManagement {
 				static_cast<System::Int32>(static_cast<System::Byte>(108)));
 			this->addButton->ActiveLineColor = System::Drawing::Color::Transparent;
 			this->addButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->addButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->addButton->BackColor = System::Drawing::Color::MistyRose;
 			this->addButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"addButton.BackgroundImage")));
 			this->addButton->ButtonText = L"Add";
 			this->addButton->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -176,9 +197,10 @@ namespace MedicalStoreManagement {
 			this->addButton->IdleBorderThickness = 2;
 			this->addButton->IdleCornerRadius = 15;
 			this->addButton->IdleFillColor = System::Drawing::Color::Empty;
-			this->addButton->IdleForecolor = System::Drawing::Color::Transparent;
-			this->addButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->addButton->IdleForecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->addButton->IdleLineColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->addButton->Location = System::Drawing::Point(868, 492);
 			this->addButton->Margin = System::Windows::Forms::Padding(5);
 			this->addButton->Name = L"addButton";
@@ -240,8 +262,8 @@ namespace MedicalStoreManagement {
 			// expiryDate
 			// 
 			this->expiryDate->Anchor = System::Windows::Forms::AnchorStyles::Left;
-			this->expiryDate->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->expiryDate->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->expiryDate->BorderRadius = 0;
 			this->expiryDate->ForeColor = System::Drawing::Color::White;
 			this->expiryDate->Format = System::Windows::Forms::DateTimePickerFormat::Long;
@@ -256,8 +278,8 @@ namespace MedicalStoreManagement {
 			// manufactureDate
 			// 
 			this->manufactureDate->Anchor = System::Windows::Forms::AnchorStyles::Left;
-			this->manufactureDate->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
-				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->manufactureDate->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->manufactureDate->BorderRadius = 0;
 			this->manufactureDate->ForeColor = System::Drawing::Color::White;
 			this->manufactureDate->Format = System::Windows::Forms::DateTimePickerFormat::Long;
@@ -320,13 +342,13 @@ namespace MedicalStoreManagement {
 			// description
 			// 
 			this->description->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->description->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
-			this->description->BorderColor = System::Drawing::Color::SeaGreen;
+			this->description->BackColor = System::Drawing::Color::MistyRose;
+			this->description->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->description->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->description->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->description->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->description->Location = System::Drawing::Point(680, 282);
 			this->description->Multiline = true;
 			this->description->Name = L"description";
@@ -350,10 +372,10 @@ namespace MedicalStoreManagement {
 			this->medicineName->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->medicineName->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->medicineName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
-			this->medicineName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->medicineName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(10)), static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->medicineName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->medicineName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(197)));
 			this->medicineName->HintText = L"Enter the name of medicine here";
 			this->medicineName->isPassword = false;
 			this->medicineName->LineFocusedColor = System::Drawing::Color::Blue;
@@ -382,8 +404,10 @@ namespace MedicalStoreManagement {
 			// 
 			// tabPage1
 			// 
-			this->tabPage1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->tabPage1->BackColor = System::Drawing::Color::MistyRose;
+			this->tabPage1->Controls->Add(this->dataGridView1);
+			this->tabPage1->Controls->Add(this->searchmedicineName);
+			this->tabPage1->Controls->Add(this->bunifuCustomLabel4);
 			this->tabPage1->Location = System::Drawing::Point(4, 54);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
@@ -391,16 +415,125 @@ namespace MedicalStoreManagement {
 			this->tabPage1->TabIndex = 2;
 			this->tabPage1->Text = L"Medicine Details";
 			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->AllowUserToAddRows = false;
+			this->dataGridView1->AllowUserToDeleteRows = false;
+			dataGridViewCellStyle7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->dataGridView1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->dataGridView1->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCellsExceptHeaders;
+			this->dataGridView1->BackgroundColor = System::Drawing::Color::GhostWhite;
+			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->dataGridView1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
+			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle8->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle8->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle8->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			this->dataGridView1->ColumnHeadersHeight = 30;
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+				this->Column1,
+					this->Column2, this->Column3, this->Column4
+			});
+			dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle9;
+			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->dataGridView1->DoubleBuffered = true;
+			this->dataGridView1->EnableHeadersVisualStyles = false;
+			this->dataGridView1->HeaderBgColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(238)));
+			this->dataGridView1->HeaderForeColor = System::Drawing::Color::White;
+			this->dataGridView1->Location = System::Drawing::Point(3, 140);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Sunken;
+			this->dataGridView1->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToDisplayedHeaders;
+			this->dataGridView1->RowTemplate->Height = 30;
+			this->dataGridView1->Size = System::Drawing::Size(1068, 422);
+			this->dataGridView1->TabIndex = 8;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Name";
+			this->Column1->MinimumWidth = 6;
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"available_stock";
+			this->Column2->MinimumWidth = 6;
+			this->Column2->Name = L"Column2";
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"Description";
+			this->Column3->MinimumWidth = 6;
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"retail_prize";
+			this->Column4->MinimumWidth = 6;
+			this->Column4->Name = L"Column4";
+			// 
+			// searchmedicineName
+			// 
+			this->searchmedicineName->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->searchmedicineName->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->searchmedicineName->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
+			this->searchmedicineName->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->searchmedicineName->HintForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->searchmedicineName->HintText = L"Enter the name of medicine here";
+			this->searchmedicineName->isPassword = false;
+			this->searchmedicineName->LineFocusedColor = System::Drawing::Color::Blue;
+			this->searchmedicineName->LineIdleColor = System::Drawing::Color::Gray;
+			this->searchmedicineName->LineMouseHoverColor = System::Drawing::Color::Blue;
+			this->searchmedicineName->LineThickness = 3;
+			this->searchmedicineName->Location = System::Drawing::Point(284, 8);
+			this->searchmedicineName->Margin = System::Windows::Forms::Padding(5, 4, 5, 4);
+			this->searchmedicineName->Name = L"searchmedicineName";
+			this->searchmedicineName->Size = System::Drawing::Size(348, 50);
+			this->searchmedicineName->TabIndex = 7;
+			this->searchmedicineName->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			this->searchmedicineName->OnValueChanged += gcnew System::EventHandler(this, &medicineEntry::searchmedicineName_OnValueChanged);
+			// 
+			// bunifuCustomLabel4
+			// 
+			this->bunifuCustomLabel4->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->bunifuCustomLabel4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->bunifuCustomLabel4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->bunifuCustomLabel4->Location = System::Drawing::Point(12, 14);
+			this->bunifuCustomLabel4->Name = L"bunifuCustomLabel4";
+			this->bunifuCustomLabel4->Size = System::Drawing::Size(264, 44);
+			this->bunifuCustomLabel4->TabIndex = 6;
+			this->bunifuCustomLabel4->Text = L"Name of Medicine:";
+			this->bunifuCustomLabel4->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
 			// medicineEntry
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(108)));
+			this->BackColor = System::Drawing::Color::MistyRose;
 			this->ClientSize = System::Drawing::Size(1082, 623);
 			this->Controls->Add(this->tabControl1);
-			this->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(199)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"medicineEntry";
 			this->Text = L"medicineEntry";
@@ -410,131 +543,160 @@ namespace MedicalStoreManagement {
 			this->tabPage2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->perPiecePrize))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->totalStock))->EndInit();
+			this->tabPage1->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 		String^ todaydate = DateTime::Today.ToShortDateString();
-	
-private: System::Void medicineEntry_Load(System::Object^ sender, System::EventArgs^ e) {
 
-	SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
-	connection.Open();
+	private: System::Void medicineEntry_Load(System::Object^ sender, System::EventArgs^ e) {
 
-	SqlCommand cmd("Select * from supplier_company", % connection);
+		SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
+		connection.Open();
 
-	SqlDataReader^ reader = cmd.ExecuteReader();
+		SqlCommand cmd("Select * from supplier_company", % connection);
 
-	DataTable^ dt = gcnew DataTable();
-	dt->Load(reader);
-	this->companyName->ValueMember = ("company_name");
-	this->companyName->DataSource = dt;
+		SqlDataReader^ reader = cmd.ExecuteReader();
 
-	
-}
+		DataTable^ dt = gcnew DataTable();
+		dt->Load(reader);
+		this->companyName->ValueMember = ("company_name");
+		this->companyName->DataSource = dt;
 
-private: System::Void addMedicineClick(System::Object^ sender, System::EventArgs^ e) {
-	
-	String^ name = this->medicineName->Text;
-	String^ mfgdate = this->manufactureDate->Value.ToShortDateString();
-	String^ expdate = this->expiryDate->Value.ToShortDateString();
-	Decimal perpieceprize = this->perPiecePrize->Value;
-	Decimal stockamount = this->totalStock->Value;
-	Decimal totalprize = perpieceprize * stockamount;
-	String^ companyname = this->companyName->Text;
-	String^ description = this->description->Text;
 
-	if (name->Length == 0 || perpieceprize == 0 || stockamount == 0 || companyname->Length == 0) {
-		MessageBox::Show("Please fill all the fields", "All fields are not filled");
 	}
 
-	int medicineid;
+	private: System::Void addMedicineClick(System::Object^ sender, System::EventArgs^ e) {
 
-	SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
-	connection.Open();
+		String^ name = this->medicineName->Text;
+		String^ mfgdate = this->manufactureDate->Value.ToShortDateString();
+		String^ expdate = this->expiryDate->Value.ToShortDateString();
+		Decimal perpieceprize = this->perPiecePrize->Value;
+		Decimal stockamount = this->totalStock->Value;
+		Decimal totalprize = perpieceprize * stockamount;
+		String^ companyname = this->companyName->Text;
+		String^ description = this->description->Text;
 
-label1:
-	SqlCommand cmd1("Select * from medicine_stock where medicine_name = @name",%connection);  //checks if the medicine already exists or not
-	cmd1.Parameters->AddWithValue("@name", name);
-	SqlDataReader^ reader = cmd1.ExecuteReader();
+		int medicineid;
+		Decimal retailprize;
+		Decimal companyid;
 
-	//....
-	if (reader->Read()) { //update the medicine stock table if the medicine already exists
-		Decimal retailprize = (Decimal)reader->GetInt32(6);
-		if (retailprize < perpieceprize * (Decimal)(1.5)) {
-			retailprize = perpieceprize * (Decimal)(1.5);
+
+
+		if (name->Length == 0 || perpieceprize == 0 || stockamount == 0 || companyname->Length == 0) {
+			MessageBox::Show("Please fill all the fields", "All fields are not filled");
 		}
-		medicineid = reader->GetInt32(0); //gets the medicine id
-		reader->Close();//don't know just throws exception so......		
-		SqlCommand cmd2("update medicine_stock set available_stock = available_stock+@stock , retail_price = @price where medicine_name = @name", % connection);
-		cmd2.Parameters->AddWithValue("@name",name);
-		cmd2.Parameters->AddWithValue("@stock", stockamount);	
-		cmd2.Parameters->AddWithValue("@price", retailprize);
-		
-		cmd2.ExecuteNonQuery();
+		else {
 
+			SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
+			connection.Open();
+
+		label1:
+			SqlCommand cmd1("Select * from medicine_stock where medicine_name = @name", % connection);
+			//checks if the medicine already exists or not
+			cmd1.Parameters->AddWithValue("@name", name);
+			SqlDataReader^ reader = cmd1.ExecuteReader();
+
+			//....
+			if (reader->Read()) {
+				//update the medicine stock table if the medicine already exists
+				retailprize = (Decimal)reader->GetInt32(6);
+				if (retailprize < perpieceprize * (Decimal)(1.5)) {
+					retailprize = perpieceprize * (Decimal)(1.5);
+				}
+				medicineid = reader->GetInt32(0); //gets the medicine id
+				reader->Close();                                          //don't know just throws exception so......		
+				SqlCommand cmd2("update medicine_stock set available_stock = available_stock+@stock , retail_price = @price where medicine_name = @name", % connection);
+				cmd2.Parameters->AddWithValue("@name", name);
+				cmd2.Parameters->AddWithValue("@stock", stockamount);
+				cmd2.Parameters->AddWithValue("@price", retailprize);
+				cmd2.ExecuteNonQuery();
+
+			}
+			///problem with medicine id (dealed)
+
+			else {
+				//add a new medicine to the medicine stocks table if the medicine doesnot already exists.
+				reader->Close();
+				SqlCommand cmd3("Insert into medicine_stock values(@name,@category,@type,@stock,@description,@retail_price)", % connection);
+				cmd3.Parameters->AddWithValue("@category", 6);
+				cmd3.Parameters->AddWithValue("@name", name);
+				cmd3.Parameters->AddWithValue("@type", 0);
+				cmd3.Parameters->AddWithValue("@stock", 0);
+				cmd3.Parameters->AddWithValue("@description", description);
+				cmd3.Parameters->AddWithValue("retail_price", 0);
+				cmd3.ExecuteNonQuery();
+				goto label1;
+
+			}
+			//...//
+
+			//.....
+
+			SqlCommand cmd5("Select * from supplier_company where company_name = @name", % connection);
+			/// gets the companyid of the supplier commpany
+			cmd5.Parameters->AddWithValue("@name", companyname);
+			SqlDataReader^ reader1 = cmd5.ExecuteReader();
+
+			if (reader1->Read()) {
+				companyid = (Decimal)reader1->GetInt32(0);
+				reader1->Close();
+			}
+			else {
+				reader1->Close();
+			}
+
+			SqlCommand cmd4("Insert into medicine_entry values (@medicineid, @supplierid, @buyprize, @mfgdate, @expdate,@perprize,@totalstock,@totalprize,@entrydate )", % connection);
+			//insert the data into the medicine_entry database
+
+			cmd4.Parameters->AddWithValue("@medicineid", medicineid);
+			cmd4.Parameters->AddWithValue("@supplierid", companyid);
+			cmd4.Parameters->AddWithValue("@buyprize", 0);
+			cmd4.Parameters->AddWithValue("@mfgdate", mfgdate);
+			cmd4.Parameters->AddWithValue("@expdate", expdate);
+			cmd4.Parameters->AddWithValue("@perprize", perpieceprize);
+			cmd4.Parameters->AddWithValue("@totalstock", stockamount);
+			cmd4.Parameters->AddWithValue("@totalprize", totalprize);
+			cmd4.Parameters->AddWithValue("@entrydate", DateTime::Today.ToShortDateString());
+			cmd4.ExecuteNonQuery();
+			//.....//
+
+			//....removes the text in the ui of the form
+
+			this->medicineName->Text = "";
+			this->manufactureDate->Value = DateTime::Today;
+			this->expiryDate->Value = DateTime::Today;
+			this->perPiecePrize->Value = 0;
+			this->totalStock->Value = 0;
+			this->companyName->Text = "";
+			this->description->Clear();
+		}
 	}
-	///problem with medicine id (dealed)
 
-	else {   //add a new medicine to the medicine stocks table if the medicine doesnot already exists.
-		reader->Close();
-		SqlCommand cmd3("Insert into medicine_stock values(@name,@category,@type,@stock,@description,@retail_price)", % connection);
-		cmd3.Parameters->AddWithValue("@category",6);
-		cmd3.Parameters->AddWithValue("@name", name);
-		cmd3.Parameters->AddWithValue("@type", 0);
-		cmd3.Parameters->AddWithValue("@stock", 0);
-		cmd3.Parameters->AddWithValue("@description", description);
-		cmd3.Parameters->AddWithValue("retail_price",0);
-		cmd3.ExecuteNonQuery();	
-		goto label1;
-				
-	}	
-	//...//
-
-	//.....
-
-	SqlCommand cmd5("Select * from supplier_company where company_name = @name",%connection);/// gets the companyid of the supplier commpany
-	cmd5.Parameters->AddWithValue("@name", companyname);
-	SqlDataReader^ reader1 = cmd5.ExecuteReader();
-	Decimal companyid;
-	if (reader1->Read()) {
-		 companyid = (Decimal)reader1->GetInt32(0);
-		reader1->Close();
-	}
-	else {
-		reader1->Close();
+	private: System::Void addkeypress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		if (e->KeyChar == 13) {
+			addMedicineClick(sender, e);
+		}
 	}
 
-	SqlCommand cmd4("Insert into medicine_entry values (@medicineid, @supplierid, @buyprize, @mfgdate, @expdate,@perprize,@totalstock,@totalprize,@entrydate )", % connection);
-	//insert the data into the medicine_entry database
+	private: System::Void searchmedicineName_OnValueChanged(System::Object^ sender, System::EventArgs^ e) {
+		String^ name = this->searchmedicineName->Text;
+		SqlConnection connection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = Mydatabase; Integrated Security = True");
+		connection.Open();
 
-	cmd4.Parameters->AddWithValue("@medicineid", medicineid);
-	cmd4.Parameters->AddWithValue("@supplierid", companyid);
-	cmd4.Parameters->AddWithValue("@buyprize",0);
-	cmd4.Parameters->AddWithValue("@mfgdate",mfgdate);
-	cmd4.Parameters->AddWithValue("@expdate",expdate);
-	cmd4.Parameters->AddWithValue("@perprize",perpieceprize);
-	cmd4.Parameters->AddWithValue("@totalstock", stockamount);
-	cmd4.Parameters->AddWithValue("@totalprize",totalprize);
-	cmd4.Parameters->AddWithValue("@entrydate",DateTime::Today.ToShortDateString());
-	cmd4.ExecuteNonQuery();
-	//.....//
+		SqlCommand cmd("Select * from medicine_stock where medicine_name like @name +'%' ", % connection);
+		cmd.Parameters->AddWithValue("@name", name);
 
-	//....
+		SqlDataReader^ reader = cmd.ExecuteReader();
+		while (reader->Read()) {
+			this->dataGridView1->Rows->Add(reader->GetString(1), reader->GetInt32(4).ToString(), reader->GetString(5), reader->GetInt32(6).ToString());
 
-	this->medicineName->Text = "";
-	this->manufactureDate->Value = DateTime::Today;
-	this->expiryDate->Value = DateTime::Today;
-	this->perPiecePrize->Value = 0;
-	this->totalStock->Value = 0;
-	this->companyName->Text = "";
-	this->description->Clear();
-}   
 
-private: System::Void addkeypress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-	if (e->KeyChar == 13) {
-		addMedicineClick(sender, e);
-	}
+		}
+	};
+
+	};
 }
-};
-}
+

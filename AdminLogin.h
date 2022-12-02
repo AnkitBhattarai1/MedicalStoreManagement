@@ -62,10 +62,6 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::Button^ button1;
 
 
-
-
-
-
 	private:
 		/// <summary>
 		/// Required designer variable.

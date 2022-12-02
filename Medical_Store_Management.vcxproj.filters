@@ -48,6 +48,9 @@
     <ClCompile Include="sellMedicine.cpp">
       <Filter>Forms</Filter>
     </ClCompile>
+    <ClCompile Include="Bill.cpp">
+      <Filter>Forms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdminLogin.h">
@@ -84,6 +87,9 @@
       <Filter>Forms</Filter>
     </ClInclude>
     <ClInclude Include="sellMedicine.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="Bill.h">
       <Filter>Forms</Filter>
     </ClInclude>
   </ItemGroup>

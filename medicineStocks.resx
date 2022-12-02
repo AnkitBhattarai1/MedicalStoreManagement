@@ -129,4 +129,22 @@
   <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="searchMedicineButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMMAAAA5CAYAAACLdp/VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ3SURBVHhe7d2vbxRBHIbxOhwOieMvwOEqcTgchpAgigFB
+        QjAYQoKoISQIMKQJooiGBAEGBAnBgCAhFSC2vbvSHm0wNZgh7+773cz+ACw394hP2pvdq5qns3PiZiVN
+        qgSgSsQAGDEARgyAEQNgxADYP2M4/rKTtjenaevGHrCwPm9M0vz97ugcD6Mx/PpWpedr39P1U4fp8soR
+        UIxrJw/TowsH6eenncG8H8Tw9cUk3T7zo/MH7p+bp2dX9keLA/53+seuOXz1RDcKrRb53O/EoBDiZgWh
+        1/l1YNHN3u6mu2fn7Tx/tz5tr7Ux6NEoVoQH5+f1XiGuAaXRiqG5rtUi9hJtDE8v7bcrgsKIcaBU66vN
+        CqGVQq/bGPQMpQs8GmFZaBMd+wj9Xseg5ygN6NOj/huAksXq8PHxpIlBv2hAF/o3AyXTJ02a+y9v7TUx
+        xGZCF/o3AyVTBJr7aqATg372bwZKls99YsBSIwbAiAEwYgCMGAAjBsCIATBiAIwYACMGwIgBMGIAjBgA
+        IwbAiAEwYgCMGAAjBsCIATBiAIwYACMGwIgBMGIAjBgAIwbABjG8uTerB3RISf9moGSD71qtXjXfwq2D
+        Svo3AyXTAqC5/+HhtIlBJ/Xkhzb03wCUSPP+5unm6DYtCHUMotMQNcijEpZF7Bd0SI/CaGPQ6T2xOmgP
+        kb8JKI2Oa4v5rsN6NNbGILGRlicXDzjxE0XSpjlC0DyP8U4MErtr0fKh09Q1piUFWFSv78zqiZ8f+K/X
+        +cm2gxhES0j+JqAkOtk2Ho1yozEERaET1MdKAxaNtgHbm9M/nnP+1xiAZUIMgBEDYMQAGDEAtSr9Bj1a
+        Ldcnu5GaAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

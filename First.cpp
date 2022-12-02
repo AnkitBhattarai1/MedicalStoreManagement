@@ -2,6 +2,7 @@
 #include "AdminLogin.h"
 
 
+
 using namespace System;
 using namespace System::Windows::Forms;
 
@@ -13,9 +14,10 @@ void main(array<String^>^ args) {
 	MedicalStoreManagement::First firstpage;
 
 	firstpage.ShowDialog();
-	
-
-	
-
 }
+	
+
+	
+
+
 
