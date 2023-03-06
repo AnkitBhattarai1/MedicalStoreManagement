@@ -320,7 +320,7 @@ namespace MedicalStoreManagement {
 			this->initialSalary->Location = System::Drawing::Point(947, 176);
 			this->initialSalary->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1410065407, 2, 0, 0 });
 			this->initialSalary->Name = L"initialSalary";
-			this->initialSalary->Size = System::Drawing::Size(320, 26);
+			this->initialSalary->Size = System::Drawing::Size(283, 26);
 			this->initialSalary->TabIndex = 27;
 			this->initialSalary->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &employeeManagement::addkeypress);
 			// 
@@ -748,8 +748,7 @@ namespace MedicalStoreManagement {
 			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Window;
 			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
-				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::Black;
 			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
 			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
@@ -916,6 +915,7 @@ namespace MedicalStoreManagement {
 		String^ gender = "null";
 		Decimal initialsalary = this->initialSalary->Value;
 		RadioButton^ checkedbutton = gcnew RadioButton();
+	
 
 		if (this->male->Checked) {
 			gender = "Male";

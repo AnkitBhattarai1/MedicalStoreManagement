@@ -48,6 +48,7 @@ namespace MedicalStoreManagement {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
 	public: System::Windows::Forms::Label^ addressofcustomer;
+	public: System::Windows::Forms::Label^ date;
 	private:
 	protected:
 
@@ -80,6 +81,7 @@ namespace MedicalStoreManagement {
 			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->addressofcustomer = (gcnew System::Windows::Forms::Label());
+			this->date = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -118,7 +120,7 @@ namespace MedicalStoreManagement {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(12, 123);
+			this->label1->Location = System::Drawing::Point(12, 108);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(129, 41);
 			this->label1->TabIndex = 22;
@@ -139,7 +141,7 @@ namespace MedicalStoreManagement {
 			this->addressofCustomerr->BackColor = System::Drawing::Color::Transparent;
 			this->addressofCustomerr->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->addressofCustomerr->Location = System::Drawing::Point(12, 164);
+			this->addressofCustomerr->Location = System::Drawing::Point(12, 152);
 			this->addressofCustomerr->Name = L"addressofCustomerr";
 			this->addressofCustomerr->Size = System::Drawing::Size(129, 41);
 			this->addressofCustomerr->TabIndex = 24;
@@ -166,7 +168,7 @@ namespace MedicalStoreManagement {
 			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
 			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this->dataGridView1->ColumnHeadersHeight = 30;
+			this->dataGridView1->ColumnHeadersHeight = 50;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
 				this->Column1,
@@ -243,11 +245,22 @@ namespace MedicalStoreManagement {
 			this->addressofcustomer->Size = System::Drawing::Size(216, 26);
 			this->addressofcustomer->TabIndex = 26;
 			// 
+			// date
+			// 
+			this->date->BackColor = System::Drawing::Color::Transparent;
+			this->date->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->date->Location = System::Drawing::Point(345, 23);
+			this->date->Name = L"date";
+			this->date->Size = System::Drawing::Size(216, 26);
+			this->date->TabIndex = 27;
+			// 
 			// Bill
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(575, 675);
+			this->Controls->Add(this->date);
 			this->Controls->Add(this->addressofcustomer);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->addressofCustomerr);
@@ -260,8 +273,7 @@ namespace MedicalStoreManagement {
 			this->ResumeLayout(false);
 
 		}
-#pragma endregion
-	
-	
+#pragma endregion	
+
 };
 }

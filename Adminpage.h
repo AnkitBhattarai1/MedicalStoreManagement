@@ -3,6 +3,8 @@
 #include "AdminLogin.h"
 #include "employeeManagement.h"
 #include "Suppliers.h"
+#include "Salesdetails.h"
+#include "Purchasedetails.h"
 
 
 
@@ -91,7 +93,9 @@ namespace MedicalStoreManagement {
 	private: ns1::BunifuCustomLabel^ monthlySales;
 	private: ns1::BunifuCustomLabel^ bunifuCustomLabel1;
 	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ salesDetailsButton;
+
+
 
 
 
@@ -131,7 +135,7 @@ namespace MedicalStoreManagement {
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->salesDetailsButton = (gcnew System::Windows::Forms::Button());
 			this->homeButton = (gcnew System::Windows::Forms::Button());
 			this->logOut = (gcnew ns1::BunifuThinButton2());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -193,7 +197,7 @@ namespace MedicalStoreManagement {
 			this->panel3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(98)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->panel3->Controls->Add(this->button3);
-			this->panel3->Controls->Add(this->button2);
+			this->panel3->Controls->Add(this->salesDetailsButton);
 			this->panel3->Controls->Add(this->homeButton);
 			this->panel3->Controls->Add(this->logOut);
 			this->panel3->Controls->Add(this->button1);
@@ -221,23 +225,25 @@ namespace MedicalStoreManagement {
 			this->button3->TabIndex = 24;
 			this->button3->Text = L"Purchase Details";
 			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Adminpage::button3_Click);
 			// 
-			// button2
+			// salesDetailsButton
 			// 
-			this->button2->BackColor = System::Drawing::Color::Transparent;
-			this->button2->FlatAppearance->BorderSize = 0;
-			this->button2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
+			this->salesDetailsButton->BackColor = System::Drawing::Color::Transparent;
+			this->salesDetailsButton->FlatAppearance->BorderSize = 0;
+			this->salesDetailsButton->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(163)),
 				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->salesDetailsButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->salesDetailsButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->button2->Location = System::Drawing::Point(-3, 198);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(250, 60);
-			this->button2->TabIndex = 23;
-			this->button2->Text = L"Sales Details";
-			this->button2->UseVisualStyleBackColor = false;
+			this->salesDetailsButton->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->salesDetailsButton->Location = System::Drawing::Point(-3, 198);
+			this->salesDetailsButton->Name = L"salesDetailsButton";
+			this->salesDetailsButton->Size = System::Drawing::Size(250, 60);
+			this->salesDetailsButton->TabIndex = 23;
+			this->salesDetailsButton->Text = L"Sales Details";
+			this->salesDetailsButton->UseVisualStyleBackColor = false;
+			this->salesDetailsButton->Click += gcnew System::EventHandler(this, &Adminpage::salesDetailsButtonClick);
 			// 
 			// homeButton
 			// 
@@ -755,6 +761,7 @@ private: System::Void Adminpage_Load(System::Object^ sender, System::EventArgs^ 
 			else {
 				sales = 0;
 				reader->Close();
+
 			}
 
 			this->monthlySales->Text = this->monthlySales->Text + sales.ToString();
@@ -851,6 +858,24 @@ private: System::Void supplierButtonClick(System::Object^ sender, System::EventA
 	Tools::childForm(form, this->panel5);
 
 }
+private: System::Void salesDetailsButtonClick(System::Object^ sender, System::EventArgs^ e) {
+		   //opens the Sales details page
+	  currentform->Close();
+	  this->homeLabel->Text = "Sales Details";
+	  Form^ form = gcnew Salesdetails();
+	  currentform = form;
+	  Tools::childForm(form, this->panel5);
+	   }
+
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	currentform->Close();
+	this->homeLabel->Text = "Purchase Details";
+	Form^ form = gcnew Purchasedetails();
+	currentform = form;
+	Tools::childForm(form, this->panel5);
+
+}
+
 
 private: System::Void homeButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->homeLabel->Text = "HOME";
@@ -869,6 +894,8 @@ private: System::Void logoutButtonClick(System::Object^ sender, System::EventArg
 
 
 	  
+
+
 
 
 };

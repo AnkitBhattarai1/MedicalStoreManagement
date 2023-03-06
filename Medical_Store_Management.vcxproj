@@ -137,6 +137,8 @@
     <ClCompile Include="First.cpp" />
     <ClCompile Include="medicineEntry.cpp" />
     <ClCompile Include="medicineStocks.cpp" />
+    <ClCompile Include="Purchasedetails.cpp" />
+    <ClCompile Include="Salesdetails.cpp" />
     <ClCompile Include="sellMedicine.cpp" />
     <ClCompile Include="Suppliers.cpp" />
     <ClCompile Include="UserLogin.cpp" />
@@ -157,6 +159,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="medicineStocks.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Purchasedetails.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Salesdetails.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="sellMedicine.h">
@@ -201,6 +209,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="medicineStocks.resx">
       <DependentUpon>medicineStocks.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasedetails.resx">
+      <DependentUpon>Purchasedetails.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salesdetails.resx">
+      <DependentUpon>Salesdetails.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sellMedicine.resx">
       <DependentUpon>sellMedicine.h</DependentUpon>

@@ -367,6 +367,7 @@ namespace MedicalStoreManagement {
 		int  retailprize;
 		int customerid;
 		int availablestock;
+	
 
 		try {
 			//gets the medicine id and retail prize from medicine_stock table
@@ -421,14 +422,16 @@ namespace MedicalStoreManagement {
 				}
 
 				//insert into the sales table..
-				SqlCommand cmd2("Insert into sales values(@customerid,@medicineid,@totalprize,@discount,@transactionprice,@date)", % connection);
+				SqlCommand cmd2("Insert into sales values(@customerid,@medicineid,@totalprize,@discount,@transactionprice,@date,@stock)", % connection);
 				cmd2.Parameters->AddWithValue("@customerid", customerid);
 				cmd2.Parameters->AddWithValue("medicineid", medicineid);
 				cmd2.Parameters->AddWithValue("@totalprize", totalprize);
 				cmd2.Parameters->AddWithValue("@discount", discount);
 				cmd2.Parameters->AddWithValue("@transactionprice", transactionprize);
 				cmd2.Parameters->AddWithValue("@date", DateTime::Today.ToShortDateString());
-				cmd2.ExecuteNonQuery();
+				cmd2.Parameters->AddWithValue("@stock", stockamount);
+
+						cmd2.ExecuteNonQuery();
 				//.....
 
 				//update the medicine_stock table
@@ -443,6 +446,7 @@ namespace MedicalStoreManagement {
 				//sets the data in the bill
 				bill.nameofCustomer->Text = customername;
 				bill.addressofcustomer->Text= customeraddress;
+				bill.date->Text = DateTime::Today.ToShortDateString();
 				bill.dataGridView1->Rows->Add(medicinename, retailprize, stockamount, discount, transactionprize);
 
 			}
